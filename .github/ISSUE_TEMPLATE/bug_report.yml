@@ -1,0 +1,33 @@
+name: Bug report
+description: Something in the test suite, tooling, or documentation is broken or wrong
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for problems with the test suite, CI, `composer.json`, or documentation itself
+        (broken links, contradictory statements). For an incorrect value inside `data/`, use the
+        "Data correction" template instead.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Commands run, e.g. `composer install && composer test`, and the output you got.
+      render: shell
+    validations:
+      required: false

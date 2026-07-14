@@ -1,0 +1,61 @@
+name: Data correction
+description: Report or propose a fix for an incorrect value in data/
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing this, please check `docs/CONVENTIONS.md` and `docs/DATASET_AUDIT.md` —
+        many things that look wrong (a stadium's sponsor name, a historical country that wasn't
+        merged into its successor, a `null` score) are documented, intentional decisions rather
+        than errors.
+
+  - type: input
+    id: record
+    attributes:
+      label: Affected record
+      description: File and record identifier, e.g. `data/matches/2022.json`, match `code` "2022-046".
+      placeholder: data/matches/2022.json — 2022-046
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current value
+      description: What the dataset currently says.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: Correct value
+      description: What it should say instead.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      description: >
+        Which of the project's three sources supports this correction?
+        See docs/DATA_SOURCES.md — OpenFootball is primary for everything except kickoff_at,
+        FIFA (api.fifa.com) is authoritative only for kickoff_at, Wikidata/Wikipedia are used
+        only for stadium coordinates OpenFootball doesn't provide. A source outside these three
+        will not be accepted as justification on its own.
+      options:
+        - OpenFootball (github.com/openfootball/worldcup.json)
+        - FIFA competition API (api.fifa.com)
+        - Wikidata / Wikipedia (coordinates only)
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Quote or link the specific value from the source above.
+    validations:
+      required: true

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "019f5fd1-c716-7d20-900b-56521e4595f7",
+    "code": "2002",
+    "year": 2002,
+    "name": "World Cup 2002"
+  },
+  {
+    "id": "019f5fd1-c716-73d2-8e96-7faf4de8c995",
+    "code": "2006",
+    "year": 2006,
+    "name": "World Cup 2006"
+  },
+  {
+    "id": "019f5fd1-c716-77a0-b8c9-5abffb4ff371",
+    "code": "2010",
+    "year": 2010,
+    "name": "World Cup 2010"
+  },
+  {
+    "id": "019f5fd1-c717-7845-8ec5-0303e8cf992b",
+    "code": "2014",
+    "year": 2014,
+    "name": "World Cup 2014"
+  },
+  {
+    "id": "019f5fd1-c717-73be-978b-3082f17906f2",
+    "code": "2018",
+    "year": 2018,
+    "name": "World Cup 2018"
+  },
+  {
+    "id": "019f5fd1-c717-7b57-aae5-385ba5774c8a",
+    "code": "2022",
+    "year": 2022,
+    "name": "World Cup 2022"
+  },
+  {
+    "id": "019f5fd1-c718-7224-ab84-4311f611f16d",
+    "code": "2026",
+    "year": 2026,
+    "name": "World Cup 2026"
+  }
+]

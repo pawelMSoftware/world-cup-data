@@ -1,0 +1,47 @@
+{
+    "name": "pawelmsoftware/world-cup-data",
+    "description": "Curated, normalized and verified FIFA World Cup datasets (2002–2026)",
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "fifa",
+        "world-cup",
+        "football",
+        "soccer",
+        "dataset",
+        "json",
+        "openfootball"
+    ],
+    "homepage": "https://github.com/pawelMSoftware/world-cup-data",
+    "authors": [
+        {
+            "name": "Paweł Malinowski"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/pawelMSoftware/world-cup-data/issues",
+        "source": "https://github.com/pawelMSoftware/world-cup-data"
+    },
+    "require": {
+        "php": "^8.5"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.0"
+    },
+    "autoload-dev": {
+        "files": [
+            "tests/Helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
