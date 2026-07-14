@@ -1,0 +1,119 @@
+# Data sources
+
+This project combines three sources, each with a specific, non-overlapping role. No dataset field
+is ever decided by more than one source.
+
+## Primary source: OpenFootball
+
+**[github.com/openfootball/worldcup.json](https://github.com/openfootball/worldcup.json)**,
+`master` branch.
+
+OpenFootball is the source of truth for everything except kickoff timestamps:
+
+- tournament list and names
+- team pairings (`team_a` / `team_b`, i.e. who played whom)
+- match stage and group
+- host countries
+- stadium and city names
+- scores (half time, full time, extra time, penalties)
+- stadium geographic coordinates, where the source provides them (2026 only, via
+  `2026/worldcup.stadiums.json`)
+
+It was chosen as the primary source because it is a structured, versioned, openly-licensed dataset
+covering every tournament in scope (2002–2026) in one consistent JSON shape, which is exactly what a
+normalized relational rebuild needs. Its main limitation — no kickoff time at all for 2002 and 2006,
+and no timezone-normalized UTC timestamp for any year — is exactly what the FIFA source below fills
+in.
+
+## Authoritative source for kickoff timestamps and team confederation: FIFA
+
+**`api.fifa.com`** — the public API backing the official FIFA competition Match Centre
+(`https://api.fifa.com/api/v3/calendar/matches`, `https://api.fifa.com/api/v3/teams/{IdTeam}`).
+
+FIFA is authoritative for exactly two fields: `kickoff_at` and `teams.json`'s `confederation_id`.
+This is a deliberate, narrower role than "primary source" — FIFA is not used for team pairings,
+scores, stadiums, or stages, all of which stay sourced from OpenFootball. The two fields have a
+different relationship to OpenFootball, though:
+
+- `kickoff_at` is a genuine **override**: OpenFootball has a (sometimes present, sometimes absent)
+  local time of its own, and FIFA's value wins if the two disagree.
+- `confederation_id` is a pure **gap-fill**: OpenFootball has no concept of confederation at all, so
+  there is nothing for FIFA to override — it is simply the only source for this field.
+
+Why FIFA and not OpenFootball for kickoff time:
+
+- OpenFootball has no `time` field at all for 2002 and 2006 — only a local calendar date.
+- Where OpenFootball does have a time, it's a local wall-clock value (sometimes with a UTC offset
+  string attached, sometimes not), which still requires conversion.
+- FIFA's API returns the kickoff `Date` already normalized to UTC, verified against the official
+  competition record rather than reconstructed from a timezone table.
+
+The policy — **FIFA wins outright for `kickoff_at`, OpenFootball wins for everything else** — was
+adopted after an initial audit found the two sources disagreed by exactly one hour on two 2026
+fixtures (both in Mexico City). Rather than silently pick one value, FIFA's timestamp was made
+authoritative project-wide, and the audit was re-run to confirm every stored `kickoff_at` now
+originates from FIFA (`tests/fixtures/fifa_kickoffs.json` is a committed snapshot of that FIFA data,
+used by the test suite to verify this without a live network call). See
+[DATASET_AUDIT.md](DATASET_AUDIT.md) for the full history.
+
+FIFA's match data was also used, more broadly, to *audit* every other field (teams, stadium, stage,
+score) — see [DATASET_AUDIT.md](DATASET_AUDIT.md) for the full results. That audit role is read-only: it only ever
+produces a report, never a silent data change.
+
+**Confederation sourcing.** Each team's FIFA numeric `IdTeam` (found on every match record it
+appears in) is stable across every tournament it appears in — verified across all 486 matches, all
+72 teams resolve to exactly one `IdTeam` each, never more than one. That `IdTeam` was looked up
+against `GET /api/v3/teams/{IdTeam}`, which returns `IdConfederation` directly, resolving cleanly for
+all 72 teams with no gaps (including the historical `Serbia and Montenegro`, correctly resolved to
+UEFA). `confederations.json`'s `name` field uses the standard English confederation name rather than
+FIFA's own API text, which returns some confederation names in French or Spanish
+(`Confédération Africaine de Football`, `Confederación Sudamericana de Fútbol`) — the same "use the
+standard English name" policy already applied to `countries.json`'s `official_name`.
+
+## Metadata gap-filling: Wikidata and Wikipedia
+
+Used **only** where OpenFootball provides no value at all for a required field, and only for
+geographic coordinates:
+
+- `stadiums.json`'s `latitude` / `longitude` for the 74 stadiums used in 2002–2022 (OpenFootball
+  carries no coordinate data for these tournaments at all).
+- Priority order: OpenFootball's own coordinate data first (used directly for all 16 2026 stadiums,
+  which do include coordinates), then Wikidata, then Wikipedia, falling back only when the higher
+  priority source had no value.
+- Wikidata/Wikipedia were never used for team names, scores, dates, stages, or any field OpenFootball
+  or FIFA already provides — this project does not treat either as a general-purpose reference.
+
+Wikipedia and Wikidata are explicitly **not** used anywhere else in the project — in particular, they
+were excluded from the dataset audit (`docs/DATASET_AUDIT.md`) in favor of FIFA's own API, and from
+`data/matches/` generation, which draws exclusively from OpenFootball and FIFA.
+
+## Summary
+
+| Field | Source | Notes |
+|---|---|---|
+| Tournament list, `code`, `name`, `year` | OpenFootball | `worldcup.json`'s top-level `name` |
+| Team pairings, stage, group, scores | OpenFootball | `matches[].team1/team2/round/group/score` |
+| Stadium name, city | OpenFootball | `ground` field (2002–2022); dedicated `worldcup.stadiums.json` (2026) |
+| Host countries | OpenFootball | derived from stadium city/country |
+| Country / team identity, ISO / FIFA codes | OpenFootball + ISO 3166-1 reference | see [CONVENTIONS.md](CONVENTIONS.md) |
+| Stadium coordinates (2026) | OpenFootball | `worldcup.stadiums.json` `coords` field |
+| Stadium coordinates (2002–2022) | Wikidata, then Wikipedia | OpenFootball has no coordinate data for these years |
+| `kickoff_at` (all years) | FIFA (`api.fifa.com`) | authoritative; OpenFootball's local time is not used |
+| `teams.json`'s `confederation_id` | FIFA (`api.fifa.com`) | `GET /api/v3/teams/{IdTeam}`; OpenFootball has no confederation data |
+| Dataset verification | FIFA (`api.fifa.com`) | read-only audit against teams/stadium/stage/score, see [DATASET_AUDIT.md](DATASET_AUDIT.md) |
+
+## What is never used
+
+Wikipedia and Wikidata are gap-fillers of last resort for one specific field (stadium coordinates),
+not general references. FIFA is authoritative for kickoff time and team confederation, and used for
+verification, but is not the primary source for anything else. No other third-party football
+database, news site, or search engine result is used anywhere in this project.
+
+**A deliberate limit on how far this goes:** referee/match-official data is also available from FIFA
+(`Officials` on each match record) and was investigated as a possible addition, but was decided
+against for this repository's current scope — coverage is inconsistent for the 2026 tournament
+(most played matches expose only the referee, not the full officiating crew), and officials'
+nationalities use FIFA association codes that include many countries with no World Cup team in this
+dataset, which would have required broadening `countries.json`'s scope. Team confederation had
+neither problem: full 72/72 coverage, and every confederation code already resolves through an
+existing team.

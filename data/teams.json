@@ -1,0 +1,506 @@
+[
+  {
+    "id": "019f5fa8-72ba-770a-98c2-3e2cf4f13ae6",
+    "country_id": "019f5fa8-72ba-7a4f-b995-8db330a7970d",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "ALG",
+    "name": "Algeria"
+  },
+  {
+    "id": "019f5fa8-72ba-738b-8b96-71db4e2a5f9b",
+    "country_id": "019f5fa8-72ba-7241-93d7-9b0331b6d41e",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "ANG",
+    "name": "Angola"
+  },
+  {
+    "id": "019f5fa8-72ba-721a-8aef-e3a2900cae60",
+    "country_id": "019f5fa8-72ba-7181-9be3-887001672b16",
+    "confederation_id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "fifa_code": "ARG",
+    "name": "Argentina"
+  },
+  {
+    "id": "019f5fa8-72ba-7d7f-9d43-2b805ebc86f7",
+    "country_id": "019f5fa8-72ba-7bb8-8796-eec88e4b7a73",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "AUS",
+    "name": "Australia"
+  },
+  {
+    "id": "019f5fa8-72ba-79f6-8d79-8855fea2548c",
+    "country_id": "019f5fa8-72ba-7189-89be-d4ac1f906344",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "AUT",
+    "name": "Austria"
+  },
+  {
+    "id": "019f5fa8-72ba-7a26-bf9b-3fa767b7a4e4",
+    "country_id": "019f5fa8-72ba-79b8-b0f2-e60ccf908ab4",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "BEL",
+    "name": "Belgium"
+  },
+  {
+    "id": "019f5fa8-72ba-79d5-a9e2-d1ea1ab99c20",
+    "country_id": "019f5fa8-72ba-735d-9a77-7988028990c6",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "BIH",
+    "name": "Bosnia and Herzegovina"
+  },
+  {
+    "id": "019f5fa8-72ba-7ba1-8cf3-1c4a28609129",
+    "country_id": "019f5fa8-72ba-71ba-a90f-55e29ed633bf",
+    "confederation_id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "fifa_code": "BRA",
+    "name": "Brazil"
+  },
+  {
+    "id": "019f5fa8-72ba-7fcd-86db-ffade38f5e29",
+    "country_id": "019f5fa8-72ba-70e4-93d9-879078323c76",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "CAN",
+    "name": "Canada"
+  },
+  {
+    "id": "019f5fa8-72ba-7496-a8e6-aeb630252fc1",
+    "country_id": "019f5fa8-72ba-7e81-8271-e90ad6dcda6b",
+    "confederation_id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "fifa_code": "CHI",
+    "name": "Chile"
+  },
+  {
+    "id": "019f5fa8-72ba-7624-822d-6306ee2b39c0",
+    "country_id": "019f5fa8-72ba-7f47-8d70-9093b3e793a6",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "CHN",
+    "name": "China"
+  },
+  {
+    "id": "019f5fa8-72ba-7f0b-96d1-e30f8242b1d3",
+    "country_id": "019f5fa8-72ba-719e-9807-ae346d23dad4",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "CIV",
+    "name": "Ivory Coast"
+  },
+  {
+    "id": "019f5fa8-72ba-7e16-a838-83314a29e203",
+    "country_id": "019f5fa8-72ba-77c8-8922-240af8593560",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "CMR",
+    "name": "Cameroon"
+  },
+  {
+    "id": "019f5fa8-72ba-799d-add7-57dae29ef241",
+    "country_id": "019f5fa8-72ba-75c9-834e-c0640f35e05a",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "COD",
+    "name": "DR Congo"
+  },
+  {
+    "id": "019f5fa8-72ba-79c6-96ce-deca6bf8e0c0",
+    "country_id": "019f5fa8-72ba-750f-9785-21cbec6fabc9",
+    "confederation_id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "fifa_code": "COL",
+    "name": "Colombia"
+  },
+  {
+    "id": "019f5fa8-72ba-7e3b-9a44-0deae1fcc7e8",
+    "country_id": "019f5fa8-72ba-7f08-a3e9-240c663a5f60",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "CPV",
+    "name": "Cape Verde"
+  },
+  {
+    "id": "019f5fa8-72ba-78e6-bad1-0eb05259bcde",
+    "country_id": "019f5fa8-72ba-7094-8c65-75bc63e2e567",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "CRC",
+    "name": "Costa Rica"
+  },
+  {
+    "id": "019f5fa8-72ba-78e9-af48-a64bf0445475",
+    "country_id": "019f5fa8-72ba-7e7c-80f2-57e8d51aa4e9",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "CRO",
+    "name": "Croatia"
+  },
+  {
+    "id": "019f5fa8-72ba-7f7d-81a3-f731967938db",
+    "country_id": "019f5fa8-72ba-76ed-adfa-b4cd084418f9",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "CUW",
+    "name": "Curaçao"
+  },
+  {
+    "id": "019f5fa8-72ba-70e8-9d15-bb32cc11e44c",
+    "country_id": "019f5fa8-72ba-7f64-b701-523237448935",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "CZE",
+    "name": "Czech Republic"
+  },
+  {
+    "id": "019f5fa8-72ba-7930-a248-796ccca23380",
+    "country_id": "019f5fa8-72ba-760b-8668-2a4adc95d730",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "DEN",
+    "name": "Denmark"
+  },
+  {
+    "id": "019f5fa8-72ba-7b31-863e-a83c7dc01c6e",
+    "country_id": "019f5fa8-72ba-76b2-b727-36b341195d59",
+    "confederation_id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "fifa_code": "ECU",
+    "name": "Ecuador"
+  },
+  {
+    "id": "019f5fa8-72ba-7caa-834d-63bbe3c92b97",
+    "country_id": "019f5fa8-72ba-7219-b526-2dc2016990c3",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "EGY",
+    "name": "Egypt"
+  },
+  {
+    "id": "019f5fa8-72ba-77dd-9f77-d392989e390a",
+    "country_id": "019f5fa8-72ba-7c57-b1ea-eec8d08a4943",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "ENG",
+    "name": "England"
+  },
+  {
+    "id": "019f5fa8-72ba-7fd6-81a4-6055a624e9ce",
+    "country_id": "019f5fa8-72ba-7240-b111-dcdea4d90525",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "ESP",
+    "name": "Spain"
+  },
+  {
+    "id": "019f5fa8-72ba-725f-8226-b37c834d75e9",
+    "country_id": "019f5fa8-72ba-7ed6-b0d2-b05a9025c9f9",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "FRA",
+    "name": "France"
+  },
+  {
+    "id": "019f5fa8-72ba-787f-9c3c-e99ef71b8a57",
+    "country_id": "019f5fa8-72ba-7ada-a751-89f1bbe13f2b",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "GER",
+    "name": "Germany"
+  },
+  {
+    "id": "019f5fa8-72ba-74a2-8d9d-8ff1fbaba2f9",
+    "country_id": "019f5fa8-72ba-79a4-bced-25414114b153",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "GHA",
+    "name": "Ghana"
+  },
+  {
+    "id": "019f5fa8-72ba-7a11-9427-dc00b2b70505",
+    "country_id": "019f5fa8-72ba-7878-bfda-7e904360fb5e",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "GRE",
+    "name": "Greece"
+  },
+  {
+    "id": "019f5fa8-72ba-709d-adf5-b0589ccd237e",
+    "country_id": "019f5fa8-72ba-772a-8ea7-94dc0f729803",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "HAI",
+    "name": "Haiti"
+  },
+  {
+    "id": "019f5fa8-72ba-75a4-b069-7fb9a1e3727c",
+    "country_id": "019f5fa8-72ba-7f6f-b9b0-07abf6f7f457",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "HON",
+    "name": "Honduras"
+  },
+  {
+    "id": "019f5fa8-72ba-750f-97f8-619b9f03d1ee",
+    "country_id": "019f5fa8-72ba-7b80-b824-d3f74d469a9b",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "IRL",
+    "name": "Ireland"
+  },
+  {
+    "id": "019f5fa8-72ba-7264-81d1-49dc1161c1df",
+    "country_id": "019f5fa8-72ba-74f9-b02d-5d5c2f967c5b",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "IRN",
+    "name": "Iran"
+  },
+  {
+    "id": "019f5fa8-72ba-7119-b0e3-bf2ce8478d83",
+    "country_id": "019f5fa8-72ba-7260-866a-3d2026907544",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "IRQ",
+    "name": "Iraq"
+  },
+  {
+    "id": "019f5fa8-72ba-76ea-848e-f673debfbe3b",
+    "country_id": "019f5fa8-72ba-7730-9231-8696dfc1985d",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "ISL",
+    "name": "Iceland"
+  },
+  {
+    "id": "019f5fa8-72ba-7baa-b2f6-749d4febb133",
+    "country_id": "019f5fa8-72ba-7769-b38e-22d2c3f493b5",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "ITA",
+    "name": "Italy"
+  },
+  {
+    "id": "019f5fa8-72ba-75f0-9878-92a1eba607a3",
+    "country_id": "019f5fa8-72ba-7ad1-afde-f048aeb3ebd5",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "JOR",
+    "name": "Jordan"
+  },
+  {
+    "id": "019f5fa8-72ba-7d6d-85df-243b1e24820c",
+    "country_id": "019f5fa8-72ba-7763-80a4-c7a3a11716b6",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "JPN",
+    "name": "Japan"
+  },
+  {
+    "id": "019f5fa8-72ba-75d8-9da5-274a3593b6ec",
+    "country_id": "019f5fa8-72ba-7c6e-9fa0-ed147c24e870",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "KOR",
+    "name": "South Korea"
+  },
+  {
+    "id": "019f5fa8-72ba-7bbf-812e-c1e72e8b548b",
+    "country_id": "019f5fa8-72ba-73ea-bad5-85b28cb82d38",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "KSA",
+    "name": "Saudi Arabia"
+  },
+  {
+    "id": "019f5fa8-72ba-74f0-82c7-72650ad6a4f2",
+    "country_id": "019f5fa8-72ba-7666-b0b0-cb278b32c7a2",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "MAR",
+    "name": "Morocco"
+  },
+  {
+    "id": "019f5fa8-72ba-7c2d-9089-9d7cd51004e0",
+    "country_id": "019f5fa8-72ba-7d77-a420-42962ea6cd27",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "MEX",
+    "name": "Mexico"
+  },
+  {
+    "id": "019f5fa8-72ba-7aaf-9c92-233c0989dce1",
+    "country_id": "019f5fa8-72ba-7079-8999-c352eb098fa8",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "NED",
+    "name": "Netherlands"
+  },
+  {
+    "id": "019f5fa8-72ba-731a-8e5b-d5eee5f8ff5c",
+    "country_id": "019f5fa8-72ba-7faa-b5c4-bc69f1b20f00",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "NGA",
+    "name": "Nigeria"
+  },
+  {
+    "id": "019f5fa8-72ba-7838-8838-5d4a852707a2",
+    "country_id": "019f5fa8-72ba-751a-84c2-236acfa1c862",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "NOR",
+    "name": "Norway"
+  },
+  {
+    "id": "019f5fa8-72ba-768d-b02b-26f599a530e6",
+    "country_id": "019f5fa8-72ba-76c4-86b0-9dea3290c681",
+    "confederation_id": "019f6049-879f-7afc-9645-b8dd233da400",
+    "fifa_code": "NZL",
+    "name": "New Zealand"
+  },
+  {
+    "id": "019f5fa8-72ba-7c6b-bcc3-76135899393c",
+    "country_id": "019f5fa8-72ba-7078-b1cf-c82c8d994da7",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "PAN",
+    "name": "Panama"
+  },
+  {
+    "id": "019f5fa8-72ba-7dd5-85fa-ace7354b66b2",
+    "country_id": "019f5fa8-72ba-7af3-8f08-69a1ae99ac85",
+    "confederation_id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "fifa_code": "PAR",
+    "name": "Paraguay"
+  },
+  {
+    "id": "019f5fa8-72ba-7a99-b33f-5b36bc6c2a6c",
+    "country_id": "019f5fa8-72ba-73ae-8b6c-4f39fd8e9775",
+    "confederation_id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "fifa_code": "PER",
+    "name": "Peru"
+  },
+  {
+    "id": "019f5fa8-72ba-7850-9840-129d920eea96",
+    "country_id": "019f5fa8-72ba-7e46-b520-10b613a9f700",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "POL",
+    "name": "Poland"
+  },
+  {
+    "id": "019f5fa8-72ba-77ad-b3c5-2336831e98be",
+    "country_id": "019f5fa8-72ba-7001-9d94-d547423efa1b",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "POR",
+    "name": "Portugal"
+  },
+  {
+    "id": "019f5fa8-72ba-78e0-9a6a-4f4c9199d014",
+    "country_id": "019f5fa8-72ba-7120-bd78-a716569e9889",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "PRK",
+    "name": "North Korea"
+  },
+  {
+    "id": "019f5fa8-72ba-7e11-a391-2082b8cb582c",
+    "country_id": "019f5fa8-72ba-7720-9f6a-cefd3a797b99",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "QAT",
+    "name": "Qatar"
+  },
+  {
+    "id": "019f5fa8-72ba-738e-b921-b41295ec28a4",
+    "country_id": "019f5fa8-72ba-721e-8325-cb51f77c95bf",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "RSA",
+    "name": "South Africa"
+  },
+  {
+    "id": "019f5fa8-72ba-7f61-a9b4-3b431d19aaf1",
+    "country_id": "019f5fa8-72ba-7861-a999-ba0b15e01d93",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "RUS",
+    "name": "Russia"
+  },
+  {
+    "id": "019f5fa8-72ba-765d-9f49-1b31bf190ec9",
+    "country_id": "019f5fa8-72ba-779b-95ab-409b64540d1c",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "SCG",
+    "name": "Serbia and Montenegro"
+  },
+  {
+    "id": "019f5fa8-72ba-7cec-821b-ef72b0ba424b",
+    "country_id": "019f5fa8-72ba-7c57-b1ea-eec8d08a4943",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "SCO",
+    "name": "Scotland"
+  },
+  {
+    "id": "019f5fa8-72ba-7ee3-a67a-8f6251c1fd2e",
+    "country_id": "019f5fa8-72ba-7207-ad35-2f2a97090a21",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "SEN",
+    "name": "Senegal"
+  },
+  {
+    "id": "019f5fa8-72ba-7362-b0b5-6ee9acfb68b5",
+    "country_id": "019f5fa8-72ba-7ea8-80a2-1e73546f4784",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "SRB",
+    "name": "Serbia"
+  },
+  {
+    "id": "019f5fa8-72ba-70c1-a488-5f6bd49f6cb9",
+    "country_id": "019f5fa8-72ba-7a86-b4e0-2ab00f628542",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "SUI",
+    "name": "Switzerland"
+  },
+  {
+    "id": "019f5fa8-72ba-7d68-943f-c1edbb845357",
+    "country_id": "019f5fa8-72ba-7b98-9210-fc389738f16b",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "SVK",
+    "name": "Slovakia"
+  },
+  {
+    "id": "019f5fa8-72ba-7845-b408-8dd00cb92b6f",
+    "country_id": "019f5fa8-72ba-7204-b156-5aa920f71932",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "SVN",
+    "name": "Slovenia"
+  },
+  {
+    "id": "019f5fa8-72ba-793b-8f1b-b1089512fb08",
+    "country_id": "019f5fa8-72ba-71a7-a2c3-92113305106f",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "SWE",
+    "name": "Sweden"
+  },
+  {
+    "id": "019f5fa8-72ba-7c3f-97c5-56db6a348054",
+    "country_id": "019f5fa8-72ba-7b6a-b283-d983cb17dc2c",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "TOG",
+    "name": "Togo"
+  },
+  {
+    "id": "019f5fa8-72ba-7ce9-b08c-619143f68bf2",
+    "country_id": "019f5fa8-72ba-7ae2-8574-29bfc43bf51e",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "TRI",
+    "name": "Trinidad and Tobago"
+  },
+  {
+    "id": "019f5fa8-72ba-7883-a46a-9e5e964b6dd2",
+    "country_id": "019f5fa8-72ba-70da-929a-27868fe9e1e3",
+    "confederation_id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "fifa_code": "TUN",
+    "name": "Tunisia"
+  },
+  {
+    "id": "019f5fa8-72ba-72a3-b47e-d779c442028a",
+    "country_id": "019f5fa8-72ba-746f-9d38-27579bfc8b4a",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "TUR",
+    "name": "Turkey"
+  },
+  {
+    "id": "019f5fa8-72ba-731c-8cb4-802982fef71e",
+    "country_id": "019f5fa8-72ba-7fc7-8747-8ebbe9f84ba8",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "UKR",
+    "name": "Ukraine"
+  },
+  {
+    "id": "019f5fa8-72ba-7d49-b456-6a3360f92899",
+    "country_id": "019f5fa8-72ba-738c-81c4-0ae24a59e7c7",
+    "confederation_id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "fifa_code": "URU",
+    "name": "Uruguay"
+  },
+  {
+    "id": "019f5fa8-72ba-7e10-81d8-b358530a3346",
+    "country_id": "019f5fa8-72ba-730b-8656-9c31b051c82c",
+    "confederation_id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "fifa_code": "USA",
+    "name": "United States"
+  },
+  {
+    "id": "019f5fa8-72ba-7ec7-89fa-2985e0bdd9c0",
+    "country_id": "019f5fa8-72ba-720c-af17-c2b2176f64a2",
+    "confederation_id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "fifa_code": "UZB",
+    "name": "Uzbekistan"
+  },
+  {
+    "id": "019f5fa8-72ba-76e8-aa42-f2b1855d1bef",
+    "country_id": "019f5fa8-72ba-7c57-b1ea-eec8d08a4943",
+    "confederation_id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "fifa_code": "WAL",
+    "name": "Wales"
+  }
+]

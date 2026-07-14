@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contributing guide
+    url: https://github.com/pawelMSoftware/world-cup-data/blob/main/docs/CONTRIBUTING.md
+    about: Read this before proposing a data correction or adding a tournament.
+  - name: Data sources policy
+    url: https://github.com/pawelMSoftware/world-cup-data/blob/main/docs/DATA_SOURCES.md
+    about: What each source (OpenFootball, FIFA, Wikidata/Wikipedia) is trusted for.

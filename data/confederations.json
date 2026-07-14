@@ -1,0 +1,32 @@
+[
+  {
+    "id": "019f6049-879f-715a-8e1d-e1b7aa99279c",
+    "code": "AFC",
+    "name": "Asian Football Confederation"
+  },
+  {
+    "id": "019f6049-879f-7382-9cef-3d0cfd7a974d",
+    "code": "CAF",
+    "name": "Confederation of African Football"
+  },
+  {
+    "id": "019f6049-879f-7683-b6a9-23b1713cd13a",
+    "code": "CONCACAF",
+    "name": "Confederation of North, Central America and Caribbean Association Football"
+  },
+  {
+    "id": "019f6049-879f-7b31-adbe-2642e8dbb7fa",
+    "code": "CONMEBOL",
+    "name": "South American Football Confederation"
+  },
+  {
+    "id": "019f6049-879f-7afc-9645-b8dd233da400",
+    "code": "OFC",
+    "name": "Oceania Football Confederation"
+  },
+  {
+    "id": "019f6049-879f-7f8d-974f-ab94deaf9bd0",
+    "code": "UEFA",
+    "name": "Union of European Football Associations"
+  }
+]

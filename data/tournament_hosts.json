@@ -1,0 +1,52 @@
+[
+  {
+    "id": "019f5fd6-4c05-744b-9614-06d8eedca312",
+    "tournament_id": "019f5fd1-c716-7d20-900b-56521e4595f7",
+    "country_id": "019f5fa8-72ba-7763-80a4-c7a3a11716b6"
+  },
+  {
+    "id": "019f5fd6-4c05-7f50-91b3-a7f23dfdc469",
+    "tournament_id": "019f5fd1-c716-7d20-900b-56521e4595f7",
+    "country_id": "019f5fa8-72ba-7c6e-9fa0-ed147c24e870"
+  },
+  {
+    "id": "019f5fd6-4c05-72a0-a126-c260a6a4bac3",
+    "tournament_id": "019f5fd1-c716-73d2-8e96-7faf4de8c995",
+    "country_id": "019f5fa8-72ba-7ada-a751-89f1bbe13f2b"
+  },
+  {
+    "id": "019f5fd6-4c05-7b2a-8bdf-f60bba3abd02",
+    "tournament_id": "019f5fd1-c716-77a0-b8c9-5abffb4ff371",
+    "country_id": "019f5fa8-72ba-721e-8325-cb51f77c95bf"
+  },
+  {
+    "id": "019f5fd6-4c05-79ea-aa0a-da40d872ea52",
+    "tournament_id": "019f5fd1-c717-7845-8ec5-0303e8cf992b",
+    "country_id": "019f5fa8-72ba-71ba-a90f-55e29ed633bf"
+  },
+  {
+    "id": "019f5fd6-4c05-7d45-a7b6-9f9669eb508e",
+    "tournament_id": "019f5fd1-c717-73be-978b-3082f17906f2",
+    "country_id": "019f5fa8-72ba-7861-a999-ba0b15e01d93"
+  },
+  {
+    "id": "019f5fd6-4c05-72d6-8429-983d68b043ad",
+    "tournament_id": "019f5fd1-c717-7b57-aae5-385ba5774c8a",
+    "country_id": "019f5fa8-72ba-7720-9f6a-cefd3a797b99"
+  },
+  {
+    "id": "019f5fd6-4c05-7667-aca3-f7b4e991c999",
+    "tournament_id": "019f5fd1-c718-7224-ab84-4311f611f16d",
+    "country_id": "019f5fa8-72ba-70e4-93d9-879078323c76"
+  },
+  {
+    "id": "019f5fd6-4c05-7372-8cc1-a9a16202ec33",
+    "tournament_id": "019f5fd1-c718-7224-ab84-4311f611f16d",
+    "country_id": "019f5fa8-72ba-7d77-a420-42962ea6cd27"
+  },
+  {
+    "id": "019f5fd6-4c05-7150-8250-8f321510aca1",
+    "tournament_id": "019f5fd1-c718-7224-ab84-4311f611f16d",
+    "country_id": "019f5fa8-72ba-730b-8656-9c31b051c82c"
+  }
+]
