@@ -7,6 +7,10 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
+No changes yet.
+
+## [1.0.1] — 2026-07-15
+
 ### Changed
 
 - `data/matches/2026.json` — `2026-101` (France v Spain, semi-final, played 2026-07-14) gained its
