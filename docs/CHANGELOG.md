@@ -7,7 +7,14 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Changed
+
+- `data/matches/2026.json` — `2026-101` (France v Spain, semi-final, played 2026-07-14) gained its
+  `half_time_team_a`/`_b` (0/1) and `full_time_team_a`/`_b` (0/2) scores, previously `null` because
+  the match had not yet been played at v1.0.0's dataset snapshot. Verified against a freshly-fetched
+  copy of FIFA's competition data with zero discrepancies; see
+  [DATASET_AUDIT.md](DATASET_AUDIT.md#2026-07-15--2026-101-score-confirmed). `2026-102`, the
+  third-place play-off, and the final remain pending.
 
 ## [1.0.0] — 2026-07-14
 

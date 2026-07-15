@@ -315,6 +315,25 @@ to a later sponsor's name) — documented in
 
 ---
 
+## Post-release updates
+
+### 2026-07-15 — `2026-101` score confirmed
+
+The first semi-final (`2026-101`, France v Spain, played 2026-07-14 at AT&T Stadium/"Dallas
+Stadium") had a `null` score at the time of the audit above, since it had not yet been played.
+It has since been played and re-checked against a freshly-fetched copy of FIFA's competition data
+(`api.fifa.com`, match `IdMatch: 400021541`):
+
+| Field | Local value | FIFA value | Match? |
+|---|---|---|---|
+| `full_time_team_a` / `full_time_team_b` | 0 / 2 | 0 / 2 | Yes |
+| `half_time_team_a` / `half_time_team_b` | 0 / 1 | not exposed by FIFA (sourced from OpenFootball, per the documented scope limitation) | N/A |
+| `kickoff_at` | `2026-07-14T19:00:00Z` | `2026-07-14T19:00:00Z` | Yes |
+| `stadium_id` | AT&T Stadium | "Dallas Stadium" (FIFA's neutral in-tournament branding) | Yes — same physical venue, already covered by the "Other" warning category above |
+
+Zero discrepancies. `2026-102` (second semi-final), the third-place play-off (`2026-103`), and the
+final (`2026-104`) remain unplayed/unresolved as of this update.
+
 ## Missing data
 
 ### Present in FIFA but missing locally
