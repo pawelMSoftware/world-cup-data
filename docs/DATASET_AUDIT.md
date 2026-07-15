@@ -334,6 +334,24 @@ It has since been played and re-checked against a freshly-fetched copy of FIFA's
 Zero discrepancies. `2026-102` (second semi-final), the third-place play-off (`2026-103`), and the
 final (`2026-104`) remain unplayed/unresolved as of this update.
 
+### 2026-07-15 — `2026-102` score confirmed
+
+The second semi-final (`2026-102`, England v Argentina, played 2026-07-15 at Mercedes-Benz
+Stadium/"Atlanta Stadium") had a `null` score at the time of the audit above, since it had not yet
+been played. It has since been played and re-checked against a freshly-fetched copy of FIFA's
+competition data (`api.fifa.com`, match `IdMatch: 400021540`):
+
+| Field | Local value | FIFA value | Match? |
+|---|---|---|---|
+| `full_time_team_a` / `full_time_team_b` | 1 / 2 | 1 / 2 | Yes |
+| `half_time_team_a` / `half_time_team_b` | 0 / 0 | not exposed by FIFA (sourced from OpenFootball, per the documented scope limitation) | N/A |
+| `kickoff_at` | `2026-07-15T19:00:00Z` | `2026-07-15T19:00:00Z` | Yes |
+| `stadium_id` | Mercedes-Benz Stadium | "Atlanta Stadium" (FIFA's neutral in-tournament branding) | Yes — same physical venue, already covered by the "Other" warning category above |
+
+Zero discrepancies. Both semi-finals are now confirmed. The third-place play-off (`2026-103`,
+France v England, 2026-07-18) and the final (`2026-104`, Spain v Argentina, 2026-07-19) now have
+known participants per FIFA but remain absent from `data/matches/2026.json` pending kickoff/result.
+
 ## Missing data
 
 ### Present in FIFA but missing locally
