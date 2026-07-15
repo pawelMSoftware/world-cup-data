@@ -7,7 +7,14 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Changed
+
+- `data/matches/2026.json` — `2026-102` (England v Argentina, semi-final, played 2026-07-15) gained
+  its `half_time_team_a`/`_b` (0/0) and `full_time_team_a`/`_b` (1/2) scores, previously `null`
+  because the match had not yet been played at v1.0.1's dataset snapshot. Verified against a
+  freshly-fetched copy of FIFA's competition data with zero discrepancies; see
+  [DATASET_AUDIT.md](DATASET_AUDIT.md#2026-07-15--2026-102-score-confirmed). Both semi-finals are
+  now confirmed; the third-place play-off and the final remain pending.
 
 ## [1.0.1] — 2026-07-15
 
