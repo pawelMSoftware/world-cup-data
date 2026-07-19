@@ -1936,5 +1936,24 @@
     "extra_time_team_b": null,
     "penalties_team_a": null,
     "penalties_team_b": null
+  },
+  {
+    "id": "019f7b15-e494-7f98-a576-2d1440cd3e16",
+    "code": "2026-103",
+    "tournament_id": "019f5fd1-c718-7224-ab84-4311f611f16d",
+    "stadium_id": "019f5fb8-8efe-7c46-b0e3-dc93b0bfac74",
+    "team_a_id": "019f5fa8-72ba-725f-8226-b37c834d75e9",
+    "team_b_id": "019f5fa8-72ba-77dd-9f77-d392989e390a",
+    "stage": "third_place",
+    "group": null,
+    "kickoff_at": "2026-07-18T21:00:00Z",
+    "half_time_team_a": 0,
+    "half_time_team_b": 4,
+    "full_time_team_a": 4,
+    "full_time_team_b": 6,
+    "extra_time_team_a": null,
+    "extra_time_team_b": null,
+    "penalties_team_a": null,
+    "penalties_team_b": null
   }
 ]
