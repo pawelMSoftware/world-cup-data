@@ -63,11 +63,10 @@ been checked against official FIFA competition data, with the full results publi
 | 2014 | Brazil | 64 |
 | 2018 | Russia | 64 |
 | 2022 | Qatar | 64 |
-| 2026 | Canada, Mexico, United States | 102 |
+| 2026 | Canada, Mexico, United States | 103 |
 
-2026's total is 102, not 104, because the third-place play-off and final are not yet played as of
-this dataset's snapshot — see [Known limitations](docs/CHANGELOG.md#known-limitations) in the
-changelog.
+2026's total is 103, not 104, because the final is not yet played as of this dataset's snapshot —
+see [Missing data](docs/DATASET_AUDIT.md#missing-data) in the dataset audit.
 
 ## Repository structure
 
@@ -80,7 +79,7 @@ data/
 ├── tournaments.json          # 7 tournaments
 ├── tournament_hosts.json     # 10 tournament/host-country pairs
 └── matches/
-    └── {year}.json           # 486 matches total, one file per tournament
+    └── {year}.json           # 487 matches total, one file per tournament
 
 docs/
 ├── ARCHITECTURE.md           # how the pipeline works
@@ -132,7 +131,7 @@ is, is in [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md).
 | Stadiums | 90 |
 | Tournaments | 7 |
 | Tournament hosts | 10 |
-| Matches | 486 |
+| Matches | 487 |
 
 ## Data sources
 
@@ -148,7 +147,7 @@ in this project. Full rationale for each source, and exactly what it is and isn'
 
 ## Verification strategy
 
-Every one of the 486 matches was independently compared against official FIFA competition data —
+Every one of the 487 matches was independently compared against official FIFA competition data —
 teams, stadium, kickoff time, stage, and score — and the full results are published in
 [`docs/DATASET_AUDIT.md`](docs/DATASET_AUDIT.md), not just summarized:
 
@@ -192,7 +191,7 @@ bump; adding a tournament or correcting data is a minor or patch release. See
 
 ## Future roadmap
 
-- Add the 2026 third-place play-off and final once played and their participants are known.
+- Add the 2026 final (`2026-104`) once played.
 - Extend coverage to earlier World Cups (pre-2002), following the same pipeline in
   [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 - Consider storing FIFA's alternate stadium/city labels as supplementary metadata, purely for

@@ -7,6 +7,10 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
+No changes yet.
+
+## [1.1.0] — 2026-07-19
+
 ### Added
 
 - `data/matches/2026.json` — `2026-103` (France v England, third-place play-off, played
