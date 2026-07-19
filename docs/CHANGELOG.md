@@ -7,7 +7,19 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Added
+
+- `data/matches/2026.json` — `2026-103` (France v England, third-place play-off, played
+  2026-07-18 at Hard Rock Stadium/"Miami Stadium") added as a new record. This match was
+  previously absent from the file (not just `null`-scored) because its participants were not
+  known until both semi-finals concluded. Sourced from OpenFootball (`2026/worldcup.json`, match
+  `num: 103`) per the project's field-sourcing policy, and cross-checked against a freshly-fetched
+  copy of FIFA's competition data (`api.fifa.com`, match `IdMatch: 400021542`) with zero
+  discrepancies: `full_time_team_a`/`_b` (4/6), `half_time_team_a`/`_b` (0/4), no extra time or
+  penalties (confirmed by both sources independently), and `kickoff_at` (`2026-07-18T21:00:00Z`,
+  FIFA-authoritative as usual) all agree; see
+  [DATASET_AUDIT.md](DATASET_AUDIT.md#2026-07-18--2026-103-added). `tests/fixtures/fifa_kickoffs.json`
+  gained the corresponding `2026-103` entry. The final (`2026-104`) remains pending.
 
 ## [1.0.2] — 2026-07-15
 

@@ -352,18 +352,46 @@ Zero discrepancies. Both semi-finals are now confirmed. The third-place play-off
 France v England, 2026-07-18) and the final (`2026-104`, Spain v Argentina, 2026-07-19) now have
 known participants per FIFA but remain absent from `data/matches/2026.json` pending kickoff/result.
 
+### 2026-07-18 — `2026-103` added
+
+The third-place play-off (`2026-103`, France v England, played 2026-07-18 at Hard Rock
+Stadium/"Miami Stadium") was previously absent from `data/matches/2026.json` entirely (not just
+`null`-scored), since its participants were only determined once both semi-finals concluded. It
+has now been played; a new match record was added, sourced from OpenFootball (`2026/worldcup.json`,
+match `num: 103`) per the project's standard field-sourcing policy, and cross-checked against a
+freshly-fetched copy of FIFA's competition data (`api.fifa.com`, match `IdMatch: 400021542`):
+
+| Field | Local value | OpenFootball value | FIFA value | Match? |
+|---|---|---|---|---|
+| `team_a_id` / `team_b_id` | France / England | `team1: France` / `team2: England` | HomeTeam France / AwayTeam England | Yes |
+| `full_time_team_a` / `full_time_team_b` | 4 / 6 | `score.ft: [4, 6]` | 4 / 6 | Yes |
+| `half_time_team_a` / `half_time_team_b` | 0 / 4 | `score.ht: [0, 4]` | not exposed by FIFA (kickoff/audit role only, per [DATA_SOURCES.md](DATA_SOURCES.md)) | Yes |
+| `extra_time_team_a` / `extra_time_team_b` | `null` / `null` | no `score.et` key present (unlike matches `99`/`100`, which do carry one) | `ResultType: 1` (normal time) and both `HomeTeamPenaltyScore`/`AwayTeamPenaltyScore` null | Yes |
+| `kickoff_at` | `2026-07-18T21:00:00Z` | `2026-07-18` `17:00 UTC-4` (local) | `2026-07-18T21:00:00Z` | Yes — FIFA is authoritative for `kickoff_at`; OpenFootball's local time converts to the same instant |
+| `stadium_id` | Hard Rock Stadium | `ground: "Miami (Miami Gardens)"` | "Miami Stadium" (FIFA's neutral in-tournament branding) | Yes — same physical venue, already covered by the "Other" warning category above |
+
+Note: some secondary press recaps (referencing the England match-winner's "98th minute" goal)
+loosely described this match as having gone to extra time; that framing is not used here since it
+does not come from one of this project's three sourcing tiers. Both OpenFootball (no `score.et` key)
+and FIFA (`ResultType: 1`, null penalty fields) independently confirm this was a normal-time result
+— the goal sequence (last goal at 90+8') fits entirely within normal time plus
+second-half stoppage. Treated as a normal-time result; `extra_time_team_a`/`_b` and
+`penalties_team_a`/`_b` all remain `null`.
+
+Zero discrepancies. `tests/fixtures/fifa_kickoffs.json` was updated with the corresponding
+`2026-103` entry. The final (`2026-104`, Spain v Argentina, 2026-07-19) remains pending.
+
 ## Missing data
 
 ### Present in FIFA but missing locally
 
 | Code | Home | Away | Stage | FIFA date |
 |---|---|---|---|---|
-| `2026-103` | TBD | TBD | Play-off for third place | 2026-07-18T21:00:00Z |
 | `2026-104` | TBD | TBD | Final | 2026-07-19T19:00:00Z |
 
-Both are 2026 knockout matches not yet played as of the audit date (third-place play-off and
-final): both OpenFootball and FIFA still carry unresolved placeholder team references for them,
-so no real team can be assigned without guessing. This is a documented, deliberate exclusion.
+Still a 2026 knockout match not yet played as of this update (the final): both OpenFootball and
+FIFA still carry unresolved placeholder team references for it, so no real team can be assigned
+without guessing. This is a documented, deliberate exclusion.
 
 ### Present locally but missing in FIFA
 
