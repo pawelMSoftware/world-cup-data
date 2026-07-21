@@ -30,7 +30,7 @@ it('has exactly the required fields, in order, on every record', function (): vo
     foreach (matches() as $match) {
         expect(array_keys($match))->toBe([
             'id', 'code', 'tournament_id', 'stadium_id', 'team_a_id', 'team_b_id',
-            'stage', 'group', 'kickoff_at', 'half_time_team_a', 'half_time_team_b',
+            'stage', 'group', 'kickoff_at', 'attendance', 'half_time_team_a', 'half_time_team_b',
             'full_time_team_a', 'full_time_team_b', 'extra_time_team_a', 'extra_time_team_b',
             'penalties_team_a', 'penalties_team_b',
         ]);
@@ -107,6 +107,13 @@ it('has a kickoff_at that originates from official FIFA competition data for eve
     foreach (matches() as $match) {
         expect($fifaKickoffs)->toHaveKey($match['code']);
         expect($match['kickoff_at'])->toBe($fifaKickoffs[$match['code']]);
+    }
+});
+
+it('has a positive integer attendance for every record', function (): void {
+    foreach (matches() as $match) {
+        expect($match['attendance'])->toBeInt();
+        expect($match['attendance'])->toBeGreaterThan(0);
     }
 });
 

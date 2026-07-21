@@ -19,13 +19,16 @@ opening an issue or PR.
   says otherwise.
 - **FIFA (`api.fifa.com`) is authoritative only for `kickoff_at`.** Any change to a kickoff timestamp
   must be sourced from FIFA's competition API, not recomputed from OpenFootball's local time.
-- **Wikidata/Wikipedia are gap-fillers of last resort**, currently used only for 2002–2022 stadium
-  coordinates, because OpenFootball has no coordinate data for those years. Do not use them to
-  override a value OpenFootball or FIFA already provides.
+- **Wikidata/Wikipedia are gap-fillers of last resort**, used for 2002–2022 stadium coordinates
+  (because OpenFootball has no coordinate data for those years) and, together with RSSSF, for
+  `matches[].attendance` (because OpenFootball has no attendance data at all — see
+  [DATA_SOURCES.md](DATA_SOURCES.md#match-attendance-fifa-rsssf-and-wikipedia) for the exact
+  per-tournament priority). Do not use them to override a value OpenFootball or FIFA already
+  provides.
 - **No other third-party source** (news sites, other football databases, search results) is used
-  anywhere in this project. A PR that introduces one will be rejected regardless of how correct the
-  value looks — see [DATA_SOURCES.md](DATA_SOURCES.md) for why the three-source boundary is kept
-  strict.
+  anywhere in this project, beyond the RSSSF/Wikipedia attendance exception documented above. A PR
+  that introduces a new one will be rejected regardless of how correct the value looks — see
+  [DATA_SOURCES.md](DATA_SOURCES.md) for why this boundary is kept strict.
 
 If you believe a value is wrong, cite which of the three sources supports your correction, and check
 whether it's a genuine error or one of the documented naming/branding differences in

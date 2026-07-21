@@ -72,6 +72,7 @@ erDiagram
         string stage
         string group
         datetime kickoff_at
+        int attendance
         int half_time_team_a
         int half_time_team_b
         int full_time_team_a
@@ -250,6 +251,7 @@ one World Cup shouldn't have to load or parse the other six.
 | `stage` | enum string | One of `group_stage`, `round_of_32`, `round_of_16`, `quarter_final`, `semi_final`, `third_place`, `final`. Normalized from OpenFootball's inconsistent round labels (`"Quarterfinals"`, `"Quarter-finals"`, `"Quarter-final"` all become `quarter_final`). |
 | `group` | string or `null` | Single letter, `A`–`L` (2002–2022 use `A`–`H`; 2026's 48-team/12-group format uses `A`–`L`). `null` for knockout-stage matches. |
 | `kickoff_at` | ISO 8601 UTC string | See [DATA_SOURCES.md](DATA_SOURCES.md) — sourced from FIFA, not OpenFootball. |
+| `attendance` | int | Official reported spectator count for the match. Always a plain positive integer, never estimated or backfilled — see [DATA_SOURCES.md](DATA_SOURCES.md) for sourcing. |
 | `half_time_team_a` / `_b` | int or `null` | Score at half time. |
 | `full_time_team_a` / `_b` | int or `null` | Score at the end of regulation (90 minutes). |
 | `extra_time_team_a` / `_b` | int or `null` | Score at the end of extra time, only set if extra time was played. |
