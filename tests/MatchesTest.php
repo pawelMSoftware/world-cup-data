@@ -32,7 +32,7 @@ it('has exactly the required fields, in order, on every record', function (): vo
             'id', 'code', 'tournament_id', 'stadium_id', 'team_a_id', 'team_b_id', 'referee_id',
             'stage', 'group', 'kickoff_at', 'attendance', 'half_time_team_a', 'half_time_team_b',
             'full_time_team_a', 'full_time_team_b', 'extra_time_team_a', 'extra_time_team_b',
-            'penalties_team_a', 'penalties_team_b',
+            'penalties_team_a', 'penalties_team_b', 'cards',
         ]);
     }
 });
@@ -122,6 +122,33 @@ it('has a positive integer attendance for every record', function (): void {
     foreach (matches() as $match) {
         expect($match['attendance'])->toBeInt();
         expect($match['attendance'])->toBeGreaterThan(0);
+    }
+});
+
+it('has a cards object with exactly team_a and team_b, in order, for every record', function (): void {
+    foreach (matches() as $match) {
+        expect($match['cards'])->toBeArray();
+        expect(array_keys($match['cards']))->toBe(['team_a', 'team_b']);
+    }
+});
+
+it('has a cards.team_a/team_b with exactly yellow and red, in order, for every record', function (): void {
+    foreach (matches() as $match) {
+        foreach (['team_a', 'team_b'] as $team) {
+            expect(array_keys($match['cards'][$team]))->toBe(['yellow', 'red']);
+        }
+    }
+});
+
+it('has non-negative integer card counts for every record', function (): void {
+    foreach (matches() as $match) {
+        foreach (['team_a', 'team_b'] as $team) {
+            foreach (['yellow', 'red'] as $kind) {
+                $value = $match['cards'][$team][$kind];
+                expect($value)->toBeInt();
+                expect($value)->toBeGreaterThanOrEqual(0);
+            }
+        }
     }
 });
 

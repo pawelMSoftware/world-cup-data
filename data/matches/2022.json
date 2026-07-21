@@ -18,7 +18,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 4,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7d0c-a2b7-aaff33314d24",
@@ -39,7 +49,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7551-8d39-0e16c9b59695",
@@ -60,7 +80,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-771e-9167-0685dab179e1",
@@ -81,7 +111,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 4,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-74af-b783-709ed77de0fc",
@@ -102,7 +142,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 6,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-75cf-af43-1b244b1fb3a0",
@@ -123,7 +173,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-76d2-87de-af2a24658a47",
@@ -144,7 +204,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-715f-b95d-7f2d108e0ab9",
@@ -165,7 +235,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-79f6-9e20-6e5545b0d91d",
@@ -186,7 +266,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7c4c-8d8a-e8fdcc261282",
@@ -207,7 +297,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7207-be94-ef8580fc40f6",
@@ -228,7 +328,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7f5e-a81e-47cd3d05f8f4",
@@ -249,7 +359,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7b44-806d-67cbfc4c0211",
@@ -270,7 +390,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7eac-b57a-55f2b04e127e",
@@ -291,7 +421,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-757a-b35e-ed97412fdef2",
@@ -312,7 +452,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 5,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7734-95fe-5ff9aa277f9c",
@@ -333,7 +483,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7443-b1bb-67062447b0b7",
@@ -354,7 +514,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7c94-affb-cf18f4dadf54",
@@ -375,7 +545,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7490-800d-5774dfe54bc5",
@@ -396,7 +576,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7e28-bf2a-80db6ef27fb2",
@@ -417,7 +607,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-70c1-87cd-3fa20b632b0b",
@@ -438,7 +638,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7438-8697-66bc1f8843f3",
@@ -459,7 +669,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7241-b04d-def9ecfeef1e",
@@ -480,7 +700,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-76de-b44f-abc6e562beb3",
@@ -501,7 +731,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7c96-a3e8-29eca6c68017",
@@ -522,7 +762,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7ffd-a08d-1b4f5537d20b",
@@ -543,7 +793,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7770-8ce1-675ae62cc838",
@@ -564,7 +824,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7d34-866f-8c15df6d99a4",
@@ -585,7 +855,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7f9a-9f2a-ed51d1dfb9ea",
@@ -606,7 +886,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7909-8e2a-3d8755f5aff2",
@@ -627,7 +917,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7311-b37c-8c7857c20287",
@@ -648,7 +948,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7e21-b05f-fdd9d91f14dc",
@@ -669,7 +979,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-71a7-b864-9c81b3303f09",
@@ -690,7 +1010,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7014-b030-dd1d7059fbc9",
@@ -711,7 +1041,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-775a-bbd6-f4b338b49983",
@@ -732,7 +1072,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-77a4-8ae9-50e65211f9e9",
@@ -753,7 +1103,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 1
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7bcd-ab5c-6749c4e6b0ed",
@@ -774,7 +1134,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-744e-b78a-2b47d004d662",
@@ -795,7 +1165,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7b52-92f3-83163a7785fe",
@@ -816,7 +1196,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-74ad-98d3-5864ce061985",
@@ -837,7 +1227,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 6,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7201-8e84-ff1753b43cb2",
@@ -858,7 +1258,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7b72-8932-236c15cde2da",
@@ -879,7 +1289,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 5,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-79d1-bb4f-e13158504031",
@@ -900,7 +1320,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7191-875d-8fbafe0adae0",
@@ -921,7 +1351,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7d6d-bb86-9661e48f93c7",
@@ -942,7 +1382,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 4,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-74fb-aaf1-3b27bcbac8ae",
@@ -963,7 +1413,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-72c4-b188-be02d506effe",
@@ -984,7 +1444,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 7,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 4,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1194-7938-824b-d477c992f395",
@@ -1005,7 +1475,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 3,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7889-8116-5cd49e7b00e2",
@@ -1026,7 +1506,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7f5b-99a3-52b32f94b019",
@@ -1047,7 +1537,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7b2b-a254-fc288b3917ca",
@@ -1068,7 +1568,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7806-9b00-fd106bd53323",
@@ -1089,7 +1599,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7190-8011-ccc8c4e68cd3",
@@ -1110,7 +1630,17 @@
     "extra_time_team_a": 1,
     "extra_time_team_b": 1,
     "penalties_team_a": 1,
-    "penalties_team_b": 3
+    "penalties_team_b": 3,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7426-94f0-a92fd90b599c",
@@ -1131,7 +1661,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-79e4-bfe5-9ad503ab6b4c",
@@ -1152,7 +1692,17 @@
     "extra_time_team_a": 0,
     "extra_time_team_b": 0,
     "penalties_team_a": 3,
-    "penalties_team_b": 0
+    "penalties_team_b": 0,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7109-b5f0-8981bb9949cd",
@@ -1173,7 +1723,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7e8b-af8a-3de8bfa44dbd",
@@ -1194,7 +1754,17 @@
     "extra_time_team_a": 1,
     "extra_time_team_b": 1,
     "penalties_team_a": 4,
-    "penalties_team_b": 2
+    "penalties_team_b": 2,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7964-a80a-b5077b543ab8",
@@ -1215,7 +1785,17 @@
     "extra_time_team_a": 2,
     "extra_time_team_b": 2,
     "penalties_team_a": 3,
-    "penalties_team_b": 4
+    "penalties_team_b": 4,
+    "cards": {
+      "team_a": {
+        "yellow": 8,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 8,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7aa0-98e0-df17eeca3315",
@@ -1236,7 +1816,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 1
+      },
+      "team_b": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7cb7-87a4-a7e40b87c60b",
@@ -1257,7 +1847,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-78eb-b6d1-eeb8f2bb1519",
@@ -1278,7 +1878,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 2,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-71ba-b9ec-33db3a6b5475",
@@ -1299,7 +1909,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 1,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-7693-b93f-19c84c8d89dd",
@@ -1320,7 +1940,17 @@
     "extra_time_team_a": null,
     "extra_time_team_b": null,
     "penalties_team_a": null,
-    "penalties_team_b": null
+    "penalties_team_b": null,
+    "cards": {
+      "team_a": {
+        "yellow": 0,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
   },
   {
     "id": "019f5ff2-1195-783e-ab72-c13f0d2a33d2",
@@ -1341,6 +1971,16 @@
     "extra_time_team_a": 3,
     "extra_time_team_b": 3,
     "penalties_team_a": 4,
-    "penalties_team_b": 2
+    "penalties_team_b": 2,
+    "cards": {
+      "team_a": {
+        "yellow": 4,
+        "red": 0
+      },
+      "team_b": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
   }
 ]

@@ -128,6 +128,27 @@ breakdown):
 [`referees-match-mapping.md`](referees-match-mapping.md) for why, e.g. the United Kingdom's four
 constituent football associations).
 
+## Disciplinary cards: FIFA, RSSSF, and Wikipedia
+
+`matches[].cards` is sourced the same way as attendance and referees: researched as its own
+milestone and fully documented, match by match, in
+[`cards-match-mapping.md`](cards-match-mapping.md) — that document is the canonical source; the
+`cards` values were copied from it verbatim, not re-derived. OpenFootball has no disciplinary data
+at all.
+
+Source priority, applied per tournament (see `cards-match-mapping.md` for the full per-tournament
+breakdown and every cross-source discrepancy found):
+
+1. **RSSSF** (`rsssf.org`) — primary for 2002, 2006, 2010, and 2014.
+2. **Wikipedia** — primary for 2018 and 2022.
+3. **FIFA** live match-timeline API (`api.fifa.com`) — primary for 2026.
+
+`cards` is keyed `team_a`/`team_b`, not `home`/`away`, matching every other paired-team field in
+this schema — World Cup matches are played at neutral venues, so a home/away distinction would be
+misleading (see [`cards-match-mapping.md`](cards-match-mapping.md)'s own Method section, which
+states this explicitly). A second-yellow-card dismissal counts as both a yellow and a red for that
+player, the standard convention also used by RSSSF and Wikipedia.
+
 ## Summary
 
 | Field | Source | Notes |
@@ -144,16 +165,18 @@ constituent football associations).
 | `matches[].attendance` | FIFA, RSSSF, Wikipedia | per-tournament priority documented above and in [`attendance-match-mapping.md`](attendance-match-mapping.md) |
 | `referees.json` (`name`, `association`) | RSSSF, Wikipedia, FIFA | per-tournament priority documented above and in [`referees-match-mapping.md`](referees-match-mapping.md) |
 | `matches[].referee_id` | Derived | foreign key resolving each match to its `referees.json` row; the match-to-referee assignment itself comes from [`referees-match-mapping.md`](referees-match-mapping.md), same as `referees.json` above |
+| `matches[].cards` | FIFA, RSSSF, Wikipedia | per-tournament priority documented above and in [`cards-match-mapping.md`](cards-match-mapping.md) |
 | Dataset verification | FIFA (`api.fifa.com`) | read-only audit against teams/stadium/stage/score, see [DATASET_AUDIT.md](DATASET_AUDIT.md) |
 
 ## What is never used
 
 Wikipedia and Wikidata are gap-fillers of last resort for stadium coordinates and (per the sections
-above) match attendance and referee identity, not general references. FIFA is authoritative for
-kickoff time and team confederation, and used for verification, but is not the primary source for
-anything else besides attendance and referees. RSSSF is used for exactly two fields, attendance and
-referees, and nothing else. Outside of these documented roles, no other third-party football
-database, news site, or search engine result is used anywhere in this project.
+above) match attendance, referee identity, and disciplinary cards, not general references. FIFA is
+authoritative for kickoff time and team confederation, and used for verification, but is not the
+primary source for anything else besides attendance, referees, and cards. RSSSF is used for exactly
+three fields — attendance, referees, and cards — and nothing else. Outside of these documented
+roles, no other third-party football database, news site, or search engine result is used anywhere
+in this project.
 
 **A deliberate limit on how far this goes.** Referee data was initially investigated and decided
 against, for two reasons: coverage is inconsistent for the 2026 tournament if the *full* officiating
