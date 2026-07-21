@@ -7,6 +7,10 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
+No changes yet.
+
+## [1.4.0] — 2026-07-21
+
 ### Added
 
 - `data/referees.json` — a new, standalone dataset of 147 unique World Cup head referees (2002–2026),
