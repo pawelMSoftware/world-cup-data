@@ -7,7 +7,23 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Added
+
+- `data/referees.json` — a new, standalone dataset of 147 unique World Cup head referees (2002–2026),
+  each with `id` (UUID v7), `code` (lowercase ASCII slug, e.g. `pierluigi-collina`), `name`
+  (normalized, diacritics preserved), and `association` (FIFA's own designation, not an ISO country
+  code). Sorted by `name` ascending. Built entirely from
+  [`referees-match-mapping.md`](referees-match-mapping.md), the canonical, already-researched
+  match-by-match referee mapping — one row per unique referee found there, no new research performed.
+  One referee, Alireza Faghani, legitimately officiated under two associations across tournaments
+  (Iran through 2022, Australia from 2026); since this dataset holds one row per person, his stored
+  `association` is his most recent one (`Australia`) — see
+  [DATA_MODEL.md](DATA_MODEL.md#refereesjson--147-records) for the full reasoning. **Not yet linked
+  to `data/matches/`** — no `referee_id` field was added to any match record; that relationship is
+  deferred to a future milestone. `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`,
+  `docs/CONTRIBUTING.md`, and `docs/CONVENTIONS.md` updated accordingly; `tests/RefereesTest.php`
+  added (13 new tests: schema, UUID/code/name uniqueness, non-empty association, no duplicate
+  records, sort order).
 
 ## [1.3.0] — 2026-07-21
 

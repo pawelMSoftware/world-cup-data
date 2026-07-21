@@ -267,6 +267,29 @@ guessing, so the matches are omitted rather than filled with a guess — see
 [CONVENTIONS.md](CONVENTIONS.md) and the match-generation history for the reasoning. 486 is therefore
 64 × 6 (2002–2022) + 102 (2026's 104 scheduled matches minus these 2).
 
+### `referees.json` — 147 records
+
+One row per unique World Cup head referee across 2002–2026. Not yet linked to `data/matches/`: this
+entity was introduced as its own milestone, deliberately scoped to the normalized referee list only.
+A `referee_id` foreign key on match records — and the corresponding entry in the entity-relationship
+diagram above — is planned as a separate, future milestone.
+
+| Field | Type | Description |
+|---|---|---|
+| `id` | UUID v7 | Permanent identifier. Will be used as the FK target once matches reference referees. |
+| `code` | string | Lowercase ASCII, hyphen-separated slug generated from `name`, unique across the dataset (e.g. `pierluigi-collina`). |
+| `name` | string | Normalized referee name, with correct diacritics. |
+| `association` | string | The football association the referee is affiliated with, as designated by FIFA — not necessarily an ISO country name (see [`referees-match-mapping.md`](referees-match-mapping.md) for why, e.g. the United Kingdom's four constituent associations). |
+
+Sorted by `name` ascending. Built from
+[`referees-match-mapping.md`](referees-match-mapping.md), the canonical, already-researched
+match-by-match referee mapping — one row per unique `code` found there. One referee in that source,
+Alireza Faghani, legitimately officiated under two different associations across tournaments (Iran
+through 2022, Australia from 2026, following a real-world federation switch); since this dataset
+holds exactly one row per person, his single `association` value here is his most recent one
+(`Australia`), not a per-tournament history — see [DATA_SOURCES.md](DATA_SOURCES.md) for the full
+sourcing.
+
 ## Cross-entity example
 
 A single match ties every other entity together. Match `2022-064` (the 2022 final, Argentina v

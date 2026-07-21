@@ -78,6 +78,7 @@ data/
 ├── stadiums.json             # 90 stadiums
 ├── tournaments.json          # 7 tournaments
 ├── tournament_hosts.json     # 10 tournament/host-country pairs
+├── referees.json             # 147 unique referees (not yet linked to matches)
 └── matches/
     └── {year}.json           # 488 matches total, one file per tournament
 
@@ -132,6 +133,7 @@ is, is in [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md).
 | Tournaments | 7 |
 | Tournament hosts | 10 |
 | Matches | 488 |
+| Referees | 147 |
 
 ## Data sources
 

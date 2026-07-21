@@ -126,6 +126,7 @@ Each dataset is sorted by a single, documented key:
 | `tournaments.json` | `year` ascending |
 | `tournament_hosts.json` | tournament `year` ascending, then country `name` ascending |
 | `data/matches/{year}.json` | `kickoff_at` ascending within the file |
+| `referees.json` | `name` ascending |
 
 Sorting is verified by the test suite (see [tests/](../tests)), not just documented — a pull request
 that breaks sort order fails `composer test`.
