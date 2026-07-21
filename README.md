@@ -140,10 +140,12 @@ is, is in [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md).
 
 | Role | Source | Used for |
 |---|---|---|
-| Primary | [OpenFootball](https://github.com/openfootball/worldcup.json) (`master` branch) | Everything except kickoff timestamps and attendance: team pairings, scores, stages, groups, stadium/city names, tournament identity. |
+| Primary | [OpenFootball](https://github.com/openfootball/worldcup.json) (`master` branch) | Everything except kickoff timestamps, attendance, referee identity, and disciplinary cards: team pairings, scores, stages, groups, stadium/city names, tournament identity. |
 | Authoritative for kickoff time and confederation | [FIFA competition API](https://api.fifa.com) | `kickoff_at` (wins outright if it disagrees with OpenFootball's local time) and `teams.json`'s `confederation_id` (OpenFootball has no confederation data at all). |
 | Metadata gap-filling | Wikidata, then Wikipedia | Stadium coordinates for 2002–2022 only, because OpenFootball has none for those years. |
 | Match attendance | FIFA, RSSSF, then Wikipedia (priority varies by tournament) | `matches[].attendance`, since OpenFootball carries no attendance data at all. See [`docs/attendance-match-mapping.md`](docs/attendance-match-mapping.md) for the full per-match sourcing. |
+| Referee identity | RSSSF, Wikipedia, then FIFA (priority varies by tournament) | `referees.json` (`name`, `association`) and `matches[].referee_id`, since OpenFootball carries no referee data at all. See [`docs/referees-match-mapping.md`](docs/referees-match-mapping.md) for the full per-match sourcing. |
+| Disciplinary cards | RSSSF, Wikipedia, then FIFA (priority varies by tournament) | `matches[].cards`, since OpenFootball carries no disciplinary data at all. See [`docs/cards-match-mapping.md`](docs/cards-match-mapping.md) for the full per-match sourcing. |
 
 Outside of these documented roles, no other third-party source (news sites, other football
 databases, search results) is used anywhere in this project. Full rationale for each source, and

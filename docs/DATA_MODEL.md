@@ -89,6 +89,7 @@ erDiagram
         int extra_time_team_b
         int penalties_team_a
         int penalties_team_b
+        object cards
     }
 ```
 
@@ -265,6 +266,7 @@ one World Cup shouldn't have to load or parse the other six.
 | `full_time_team_a` / `_b` | int or `null` | Score at the end of regulation (90 minutes). |
 | `extra_time_team_a` / `_b` | int or `null` | Score at the end of extra time, only set if extra time was played. |
 | `penalties_team_a` / `_b` | int or `null` | Penalty shootout score, only set if the match went to penalties. |
+| `cards` | object | Disciplinary card counts, nested by team: `{ "team_a": { "yellow": int, "red": int }, "team_b": { "yellow": int, "red": int } }`. Both values are always non-negative integers, never `null` — see [DATA_SOURCES.md](DATA_SOURCES.md) for sourcing. Keyed `team_a`/`team_b`, matching every other paired-team field in this schema (`team_a_id`, `half_time_team_a`, etc.) rather than `home`/`away`, since World Cup matches are played at neutral venues — see the `team_a`/`team_b` note above. |
 
 Sorted by tournament `year` ascending, then `kickoff_at` ascending, within each file (each file only
 contains one year, so in practice this is just a `kickoff_at` sort per file).

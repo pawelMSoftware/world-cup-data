@@ -7,7 +7,24 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Added
+
+- `data/matches/{year}.json` — every one of the 488 match records gained a new `cards` object
+  (placed as the last field), disciplinary card counts nested by team:
+  `{ "team_a": { "yellow": int, "red": int }, "team_b": { "yellow": int, "red": int } }`. This is a
+  purely additive schema change: no existing field, value, or `id` was touched. Values were copied
+  verbatim from [`docs/cards-match-mapping.md`](cards-match-mapping.md), the canonical,
+  already-researched and cross-checked source for this field (FIFA / RSSSF / Wikipedia, priority
+  documented per tournament in that file and in
+  [DATA_SOURCES.md](DATA_SOURCES.md#disciplinary-cards-fifa-rsssf-and-wikipedia)) — no new research
+  was performed as part of this integration. Keyed `team_a`/`team_b`, not `home`/`away` (a deliberate
+  deviation from the milestone's own example, made to match both this schema's existing convention
+  and the canonical document's own column headers — see
+  [DATA_MODEL.md](DATA_MODEL.md#data-matchesyearjson--488-records-across-7-files) for the reasoning:
+  World Cup matches are played at neutral venues, so a `home`/`away` label would be misleading).
+  `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, and `docs/CONTRIBUTING.md` updated; `tests/MatchesTest.php`
+  updated (`cards` added to the required-fields-in-order check, plus three new tests: nested key
+  order, and non-negative integer values).
 
 ## [1.4.0] — 2026-07-21
 
