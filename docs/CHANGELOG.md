@@ -7,6 +7,10 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
+No changes yet.
+
+## [1.2.0] — 2026-07-21
+
 ### Added
 
 - `data/matches/2026.json` — `2026-104` (Spain v Argentina, final, played 2026-07-19 at MetLife
