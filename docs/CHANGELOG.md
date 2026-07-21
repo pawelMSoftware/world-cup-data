@@ -7,6 +7,10 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
+No changes yet.
+
+## [1.5.0] — 2026-07-21
+
 ### Added
 
 - `data/matches/{year}.json` — every one of the 488 match records gained a new `cards` object
