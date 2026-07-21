@@ -142,7 +142,8 @@ constituent football associations).
 | `kickoff_at` (all years) | FIFA (`api.fifa.com`) | authoritative; OpenFootball's local time is not used |
 | `teams.json`'s `confederation_id` | FIFA (`api.fifa.com`) | `GET /api/v3/teams/{IdTeam}`; OpenFootball has no confederation data |
 | `matches[].attendance` | FIFA, RSSSF, Wikipedia | per-tournament priority documented above and in [`attendance-match-mapping.md`](attendance-match-mapping.md) |
-| `referees.json` (`name`, `association`) | RSSSF, Wikipedia, FIFA | per-tournament priority documented above and in [`referees-match-mapping.md`](referees-match-mapping.md); not yet linked from `data/matches/` |
+| `referees.json` (`name`, `association`) | RSSSF, Wikipedia, FIFA | per-tournament priority documented above and in [`referees-match-mapping.md`](referees-match-mapping.md) |
+| `matches[].referee_id` | Derived | foreign key resolving each match to its `referees.json` row; the match-to-referee assignment itself comes from [`referees-match-mapping.md`](referees-match-mapping.md), same as `referees.json` above |
 | Dataset verification | FIFA (`api.fifa.com`) | read-only audit against teams/stadium/stage/score, see [DATASET_AUDIT.md](DATASET_AUDIT.md) |
 
 ## What is never used
@@ -161,6 +162,6 @@ crew is wanted (most played matches expose only the head referee, not assistants
 dataset. `referees.json` sidesteps both: it deliberately stores only the head referee
 (`OfficialType: 1`), which is consistently available across every tournament, and `association` is
 stored as its own free-form string rather than a `countries.json` foreign key, so it never needs
-`countries.json`'s scope to grow. This is why `referees.json` is not yet linked to `data/matches/` —
-a `referee_id` foreign key is deferred to a future milestone, once that relationship's own scope is
-settled.
+`countries.json`'s scope to grow. `data/matches/{year}.json`'s `referee_id` foreign key, resolving
+each match to its `referees.json` row, was added in a later milestone once the standalone dataset
+was in place.

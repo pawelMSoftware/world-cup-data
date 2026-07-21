@@ -29,7 +29,7 @@ it('contains only matches belonging to its own tournament in every data/matches/
 it('has exactly the required fields, in order, on every record', function (): void {
     foreach (matches() as $match) {
         expect(array_keys($match))->toBe([
-            'id', 'code', 'tournament_id', 'stadium_id', 'team_a_id', 'team_b_id',
+            'id', 'code', 'tournament_id', 'stadium_id', 'team_a_id', 'team_b_id', 'referee_id',
             'stage', 'group', 'kickoff_at', 'attendance', 'half_time_team_a', 'half_time_team_b',
             'full_time_team_a', 'full_time_team_b', 'extra_time_team_a', 'extra_time_team_b',
             'penalties_team_a', 'penalties_team_b',
@@ -86,6 +86,14 @@ it('references an existing team for every team_b_id', function (): void {
 it('never has team_a_id equal to team_b_id', function (): void {
     foreach (matches() as $match) {
         expect($match['team_a_id'])->not->toBe($match['team_b_id']);
+    }
+});
+
+it('references an existing referee for every referee_id', function (): void {
+    $refereeIds = array_column(referees(), 'id');
+
+    foreach (matches() as $match) {
+        expect($refereeIds)->toContain($match['referee_id']);
     }
 });
 

@@ -15,8 +15,8 @@ reading one tournament's fixture list by hand; it breaks down the moment you wan
 that spans tournaments — "how many times have these two teams met", "which stadiums has this country
 hosted at", "what's this match's permanent ID" — without re-parsing and re-matching strings each time.
 
-This repository restructures the same underlying facts into seven linked entities (countries,
-confederations, teams, stadiums, tournaments, tournament hosts, matches), each with a permanent UUID
+This repository restructures the same underlying facts into eight linked entities (countries,
+confederations, teams, stadiums, tournaments, tournament hosts, matches, referees), each with a permanent UUID
 and explicit foreign keys, plus an automated test suite that keeps every relationship, sort order,
 and formatting rule enforced going forward. Data quality is not a one-time claim — every match has
 been checked against official FIFA competition data, with the full results published in
@@ -37,8 +37,8 @@ been checked against official FIFA competition data, with the full results publi
 
 ## Features
 
-- **Seven normalized entities** — countries, confederations, teams, stadiums, tournaments, tournament
-  hosts, and matches — linked exclusively by
+- **Eight normalized entities** — countries, confederations, teams, stadiums, tournaments, tournament
+  hosts, matches, and referees — linked exclusively by
   [UUID v7](https://www.rfc-editor.org/rfc/rfc9562#name-uuid-version-7) foreign keys.
 - **Team/country separation** — a national football team and a sovereign country are different
   concepts in this model, not conflated.
@@ -78,7 +78,7 @@ data/
 ├── stadiums.json             # 90 stadiums
 ├── tournaments.json          # 7 tournaments
 ├── tournament_hosts.json     # 10 tournament/host-country pairs
-├── referees.json             # 147 unique referees (not yet linked to matches)
+├── referees.json             # 147 unique referees, linked from matches via referee_id
 └── matches/
     └── {year}.json           # 488 matches total, one file per tournament
 
@@ -116,6 +116,7 @@ erDiagram
     STADIUM ||--o{ MATCH : "hosts"
     TEAM ||--o{ MATCH : "plays as team_a in"
     TEAM ||--o{ MATCH : "plays as team_b in"
+    REFEREE ||--o{ MATCH : "officiates"
 ```
 
 Every reference between files is a UUID v7 foreign key — never a name, code, or other natural key.
