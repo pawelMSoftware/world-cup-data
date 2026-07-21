@@ -108,6 +108,26 @@ This makes `attendance` the one field in `data/matches/` that is not sourced exc
 OpenFootball or FIFA — OpenFootball does not carry attendance data at all, and FIFA's API only
 covers it directly for 2026.
 
+## Referee identity: FIFA, RSSSF, and Wikipedia
+
+`referees.json` (`name`, `association`) is sourced the same way as attendance: researched as its own
+milestone and fully documented, match by match, in
+[`referees-match-mapping.md`](referees-match-mapping.md) — that document is the canonical source;
+`referees.json`'s values were copied from it verbatim (one row per unique referee found there), not
+re-derived. OpenFootball has no referee data at all.
+
+Source priority, applied per tournament (see `referees-match-mapping.md` for the full per-tournament
+breakdown):
+
+1. **RSSSF** (`rsssf.org`) — primary for 2002, 2006, 2010, 2014, and 2018.
+2. **Wikipedia** — primary for 2022 (RSSSF has no equivalent full-table page for that tournament).
+3. **FIFA** live competition API (`Officials`, `OfficialType: 1`, head referee only) — primary for
+   2026.
+
+`association` preserves FIFA's own association designation verbatim (not an ISO country code — see
+[`referees-match-mapping.md`](referees-match-mapping.md) for why, e.g. the United Kingdom's four
+constituent football associations).
+
 ## Summary
 
 | Field | Source | Notes |
@@ -122,22 +142,25 @@ covers it directly for 2026.
 | `kickoff_at` (all years) | FIFA (`api.fifa.com`) | authoritative; OpenFootball's local time is not used |
 | `teams.json`'s `confederation_id` | FIFA (`api.fifa.com`) | `GET /api/v3/teams/{IdTeam}`; OpenFootball has no confederation data |
 | `matches[].attendance` | FIFA, RSSSF, Wikipedia | per-tournament priority documented above and in [`attendance-match-mapping.md`](attendance-match-mapping.md) |
+| `referees.json` (`name`, `association`) | RSSSF, Wikipedia, FIFA | per-tournament priority documented above and in [`referees-match-mapping.md`](referees-match-mapping.md); not yet linked from `data/matches/` |
 | Dataset verification | FIFA (`api.fifa.com`) | read-only audit against teams/stadium/stage/score, see [DATASET_AUDIT.md](DATASET_AUDIT.md) |
 
 ## What is never used
 
-Wikipedia and Wikidata are gap-fillers of last resort for stadium coordinates and (per the section
-above) match attendance, not general references. FIFA is authoritative for kickoff time and team
-confederation, and used for verification, but is not the primary source for anything else besides
-attendance. RSSSF is used for exactly one field, attendance, and nothing else. Outside of these
-documented roles, no other third-party football database, news site, or search engine result is
-used anywhere in this project.
+Wikipedia and Wikidata are gap-fillers of last resort for stadium coordinates and (per the sections
+above) match attendance and referee identity, not general references. FIFA is authoritative for
+kickoff time and team confederation, and used for verification, but is not the primary source for
+anything else besides attendance and referees. RSSSF is used for exactly two fields, attendance and
+referees, and nothing else. Outside of these documented roles, no other third-party football
+database, news site, or search engine result is used anywhere in this project.
 
-**A deliberate limit on how far this goes:** referee/match-official data is also available from FIFA
-(`Officials` on each match record) and was investigated as a possible addition, but was decided
-against for this repository's current scope — coverage is inconsistent for the 2026 tournament
-(most played matches expose only the referee, not the full officiating crew), and officials'
-nationalities use FIFA association codes that include many countries with no World Cup team in this
-dataset, which would have required broadening `countries.json`'s scope. Team confederation had
-neither problem: full 72/72 coverage, and every confederation code already resolves through an
-existing team.
+**A deliberate limit on how far this goes.** Referee data was initially investigated and decided
+against, for two reasons: coverage is inconsistent for the 2026 tournament if the *full* officiating
+crew is wanted (most played matches expose only the head referee, not assistants/VAR), and FIFA's
+`Officials` nationalities use association codes for many countries with no World Cup team in this
+dataset. `referees.json` sidesteps both: it deliberately stores only the head referee
+(`OfficialType: 1`), which is consistently available across every tournament, and `association` is
+stored as its own free-form string rather than a `countries.json` foreign key, so it never needs
+`countries.json`'s scope to grow. This is why `referees.json` is not yet linked to `data/matches/` —
+a `referee_id` foreign key is deferred to a future milestone, once that relationship's own scope is
+settled.

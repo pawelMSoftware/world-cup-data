@@ -81,6 +81,16 @@ function tournamentHosts(): array
 }
 
 /**
+ * The decoded, memoized contents of data/referees.json.
+ */
+function referees(): array
+{
+    static $referees = null;
+
+    return $referees ??= loadJson('referees.json');
+}
+
+/**
  * The tournament years with a matches file under data/matches/.
  */
 function matchYears(): array
