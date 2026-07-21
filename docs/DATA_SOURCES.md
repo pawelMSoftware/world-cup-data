@@ -1,6 +1,6 @@
 # Data sources
 
-This project combines three sources, each with a specific, non-overlapping role. No dataset field
+This project combines five sources, each with a specific, non-overlapping role. No dataset field
 is ever decided by more than one source.
 
 ## Primary source: OpenFootball
@@ -8,7 +8,8 @@ is ever decided by more than one source.
 **[github.com/openfootball/worldcup.json](https://github.com/openfootball/worldcup.json)**,
 `master` branch.
 
-OpenFootball is the source of truth for everything except kickoff timestamps:
+OpenFootball is the source of truth for everything except kickoff timestamps and attendance (the
+latter is not a field OpenFootball provides at all — see [below](#match-attendance-fifa-rsssf-and-wikipedia)):
 
 - tournament list and names
 - team pairings (`team_a` / `team_b`, i.e. who played whom)
@@ -83,9 +84,29 @@ geographic coordinates:
 - Wikidata/Wikipedia were never used for team names, scores, dates, stages, or any field OpenFootball
   or FIFA already provides — this project does not treat either as a general-purpose reference.
 
-Wikipedia and Wikidata are explicitly **not** used anywhere else in the project — in particular, they
-were excluded from the dataset audit (`docs/DATASET_AUDIT.md`) in favor of FIFA's own API, and from
-`data/matches/` generation, which draws exclusively from OpenFootball and FIFA.
+Wikipedia and Wikidata are otherwise **not** used elsewhere in the project — in particular, they
+were excluded from the dataset audit (`docs/DATASET_AUDIT.md`) in favor of FIFA's own API. The one
+other exception, `attendance`, is documented in its own section immediately below.
+
+## Match attendance: FIFA, RSSSF, and Wikipedia
+
+`matches[].attendance` is the one field sourced from outside OpenFootball/FIFA/Wikidata's usual
+roles above. It was researched as its own milestone and is fully documented, match by match, in
+[`attendance-match-mapping.md`](attendance-match-mapping.md) — that document is the canonical
+source; this dataset's `attendance` values were copied from it verbatim, not re-derived.
+
+Source priority, applied per tournament (see `attendance-match-mapping.md` for the full
+per-tournament breakdown and every cross-source discrepancy found):
+
+1. **FIFA** official match reports / live competition API — primary for 2026, cross-check
+   elsewhere where available.
+2. **RSSSF** (`rsssf.org`) — primary for 2002, 2010, and 2018.
+3. **Wikipedia** match/group articles (citing FIFA official match reports) — primary for 2006,
+   2014, 2022, and 2026; cross-check against RSSSF for 2002, 2010, and 2018.
+
+This makes `attendance` the one field in `data/matches/` that is not sourced exclusively from
+OpenFootball or FIFA — OpenFootball does not carry attendance data at all, and FIFA's API only
+covers it directly for 2026.
 
 ## Summary
 
@@ -100,14 +121,17 @@ were excluded from the dataset audit (`docs/DATASET_AUDIT.md`) in favor of FIFA'
 | Stadium coordinates (2002–2022) | Wikidata, then Wikipedia | OpenFootball has no coordinate data for these years |
 | `kickoff_at` (all years) | FIFA (`api.fifa.com`) | authoritative; OpenFootball's local time is not used |
 | `teams.json`'s `confederation_id` | FIFA (`api.fifa.com`) | `GET /api/v3/teams/{IdTeam}`; OpenFootball has no confederation data |
+| `matches[].attendance` | FIFA, RSSSF, Wikipedia | per-tournament priority documented above and in [`attendance-match-mapping.md`](attendance-match-mapping.md) |
 | Dataset verification | FIFA (`api.fifa.com`) | read-only audit against teams/stadium/stage/score, see [DATASET_AUDIT.md](DATASET_AUDIT.md) |
 
 ## What is never used
 
-Wikipedia and Wikidata are gap-fillers of last resort for one specific field (stadium coordinates),
-not general references. FIFA is authoritative for kickoff time and team confederation, and used for
-verification, but is not the primary source for anything else. No other third-party football
-database, news site, or search engine result is used anywhere in this project.
+Wikipedia and Wikidata are gap-fillers of last resort for stadium coordinates and (per the section
+above) match attendance, not general references. FIFA is authoritative for kickoff time and team
+confederation, and used for verification, but is not the primary source for anything else besides
+attendance. RSSSF is used for exactly one field, attendance, and nothing else. Outside of these
+documented roles, no other third-party football database, news site, or search engine result is
+used anywhere in this project.
 
 **A deliberate limit on how far this goes:** referee/match-official data is also available from FIFA
 (`Officials` on each match record) and was investigated as a possible addition, but was decided

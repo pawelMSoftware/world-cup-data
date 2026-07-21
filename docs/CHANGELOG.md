@@ -7,7 +7,18 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Added
+
+- `data/matches/{year}.json` — every one of the 488 match records gained a new `attendance` field
+  (positive integer, placed immediately after `kickoff_at`), the official reported spectator count
+  for that match. This is a purely additive schema change: no existing field, value, or `id` was
+  touched. Values were copied verbatim from [`docs/attendance-match-mapping.md`](attendance-match-mapping.md),
+  the canonical, already-researched and cross-checked source for this field (FIFA / RSSSF /
+  Wikipedia, priority documented per tournament in that file and in
+  [DATA_SOURCES.md](DATA_SOURCES.md#match-attendance-fifa-rsssf-and-wikipedia)) — no new research was
+  performed as part of this integration. `docs/DATA_MODEL.md` and `docs/DATA_SOURCES.md` updated to
+  document the new field and its sourcing; `tests/MatchesTest.php` updated (`attendance` added to the
+  required-fields-in-order check, plus a new positive-integer validation test).
 
 ## [1.2.0] — 2026-07-21
 

@@ -137,13 +137,14 @@ is, is in [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md).
 
 | Role | Source | Used for |
 |---|---|---|
-| Primary | [OpenFootball](https://github.com/openfootball/worldcup.json) (`master` branch) | Everything except kickoff timestamps: team pairings, scores, stages, groups, stadium/city names, tournament identity. |
+| Primary | [OpenFootball](https://github.com/openfootball/worldcup.json) (`master` branch) | Everything except kickoff timestamps and attendance: team pairings, scores, stages, groups, stadium/city names, tournament identity. |
 | Authoritative for kickoff time and confederation | [FIFA competition API](https://api.fifa.com) | `kickoff_at` (wins outright if it disagrees with OpenFootball's local time) and `teams.json`'s `confederation_id` (OpenFootball has no confederation data at all). |
 | Metadata gap-filling | Wikidata, then Wikipedia | Stadium coordinates for 2002–2022 only, because OpenFootball has none for those years. |
+| Match attendance | FIFA, RSSSF, then Wikipedia (priority varies by tournament) | `matches[].attendance`, since OpenFootball carries no attendance data at all. See [`docs/attendance-match-mapping.md`](docs/attendance-match-mapping.md) for the full per-match sourcing. |
 
-No other third-party source (news sites, other football databases, search results) is used anywhere
-in this project. Full rationale for each source, and exactly what it is and isn't trusted for, is in
-[`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
+Outside of these documented roles, no other third-party source (news sites, other football
+databases, search results) is used anywhere in this project. Full rationale for each source, and
+exactly what it is and isn't trusted for, is in [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
 
 ## Verification strategy
 
