@@ -7,7 +7,20 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Added
+
+- `data/matches/2026.json` — `2026-104` (Spain v Argentina, final, played 2026-07-19 at MetLife
+  Stadium/"New York/New Jersey Stadium") added as a new record. This match was previously absent
+  from the file (not just `null`-scored) because its participants were not known until both
+  semi-finals concluded. Sourced from OpenFootball (`2026/worldcup.json`, match `num: 104`) per the
+  project's field-sourcing policy, and cross-checked against a freshly-fetched copy of FIFA's
+  competition data (`api.fifa.com`, match `IdMatch: 400021543`) with zero discrepancies:
+  `full_time_team_a`/`_b` (0/0), `half_time_team_a`/`_b` (0/0), `extra_time_team_a`/`_b` (1/0,
+  `ResultType: 3`), no penalties needed, and `kickoff_at` (`2026-07-19T19:00:00Z`,
+  FIFA-authoritative as usual) all agree; see
+  [DATASET_AUDIT.md](DATASET_AUDIT.md#2026-07-19--2026-104-added).
+  `tests/fixtures/fifa_kickoffs.json` gained the corresponding `2026-104` entry. All 488 matches
+  across the seven tournaments in scope are now complete.
 
 ## [1.1.0] — 2026-07-19
 

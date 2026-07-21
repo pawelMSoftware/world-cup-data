@@ -381,21 +381,39 @@ second-half stoppage. Treated as a normal-time result; `extra_time_team_a`/`_b` 
 Zero discrepancies. `tests/fixtures/fifa_kickoffs.json` was updated with the corresponding
 `2026-103` entry. The final (`2026-104`, Spain v Argentina, 2026-07-19) remains pending.
 
+### 2026-07-19 — `2026-104` added
+
+The final (`2026-104`, Spain v Argentina, played 2026-07-19 at MetLife Stadium/"New York/New
+Jersey Stadium") was previously absent from `data/matches/2026.json` entirely (not just
+`null`-scored), since its participants were only determined once both semi-finals concluded. It
+has now been played; a new match record was added, sourced from OpenFootball (`2026/worldcup.json`,
+match `num: 104`) per the project's standard field-sourcing policy, and cross-checked against a
+freshly-fetched copy of FIFA's competition data (`api.fifa.com`, match `IdMatch: 400021543`):
+
+| Field | Local value | OpenFootball value | FIFA value | Match? |
+|---|---|---|---|---|
+| `team_a_id` / `team_b_id` | Spain / Argentina | `team1: Spain` / `team2: Argentina` | HomeTeam Spain / AwayTeam Argentina | Yes |
+| `full_time_team_a` / `full_time_team_b` | 0 / 0 | `score.ft: [0, 0]` | not separately exposed by FIFA's summary result fields (kickoff/audit role only, per [DATA_SOURCES.md](DATA_SOURCES.md)) | Yes |
+| `half_time_team_a` / `half_time_team_b` | 0 / 0 | `score.ht: [0, 0]` | not exposed by FIFA (kickoff/audit role only, per [DATA_SOURCES.md](DATA_SOURCES.md)) | Yes |
+| `extra_time_team_a` / `extra_time_team_b` | 1 / 0 | `score.et: [1, 0]` | `HomeTeamScore`/`AwayTeamScore`: 1 / 0, `ResultType: 3` (extra-time result), `MatchTime: "109'"` | Yes |
+| `penalties_team_a` / `penalties_team_b` | `null` / `null` | no `score.pen` key present | both `HomeTeamPenaltyScore`/`AwayTeamPenaltyScore` null | Yes — match was decided in extra time, before a shootout was needed |
+| `kickoff_at` | `2026-07-19T19:00:00Z` | `2026-07-19` `15:00 UTC-4` (local) | `2026-07-19T19:00:00Z` | Yes — FIFA is authoritative for `kickoff_at`; OpenFootball's local time converts to the same instant |
+| `stadium_id` | MetLife Stadium | `ground: "New York/New Jersey (East Rutherford)"` | "New York/New Jersey Stadium" (FIFA's neutral in-tournament branding) | Yes — same physical venue, already covered by the "Other" warning category above |
+
+Zero discrepancies. `tests/fixtures/fifa_kickoffs.json` was updated with the corresponding
+`2026-104` entry. All 488 matches across the seven tournaments in scope are now confirmed and
+complete.
+
 ## Missing data
 
 ### Present in FIFA but missing locally
 
-| Code | Home | Away | Stage | FIFA date |
-|---|---|---|---|---|
-| `2026-104` | TBD | TBD | Final | 2026-07-19T19:00:00Z |
-
-Still a 2026 knockout match not yet played as of this update (the final): both OpenFootball and
-FIFA still carry unresolved placeholder team references for it, so no real team can be assigned
-without guessing. This is a documented, deliberate exclusion.
+None. All 488 matches present in FIFA's competition data for the seven tournaments in scope are
+now present locally, as of `2026-104`'s addition above.
 
 ### Present locally but missing in FIFA
 
-None. Every one of the 486 local matches resolved to exactly one FIFA fixture.
+None. Every one of the 488 local matches resolved to exactly one FIFA fixture.
 
 ---
 
