@@ -18,12 +18,20 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
   One referee, Alireza Faghani, legitimately officiated under two associations across tournaments
   (Iran through 2022, Australia from 2026); since this dataset holds one row per person, his stored
   `association` is his most recent one (`Australia`) — see
-  [DATA_MODEL.md](DATA_MODEL.md#refereesjson--147-records) for the full reasoning. **Not yet linked
-  to `data/matches/`** — no `referee_id` field was added to any match record; that relationship is
-  deferred to a future milestone. `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`,
-  `docs/CONTRIBUTING.md`, and `docs/CONVENTIONS.md` updated accordingly; `tests/RefereesTest.php`
-  added (13 new tests: schema, UUID/code/name uniqueness, non-empty association, no duplicate
-  records, sort order).
+  [DATA_MODEL.md](DATA_MODEL.md#refereesjson--147-records) for the full reasoning. `docs/DATA_MODEL.md`,
+  `docs/DATA_SOURCES.md`, `docs/CONTRIBUTING.md`, and `docs/CONVENTIONS.md` updated accordingly;
+  `tests/RefereesTest.php` added (13 new tests: schema, UUID/code/name uniqueness, non-empty
+  association, no duplicate records, sort order).
+- `data/matches/{year}.json` — every one of the 488 match records gained a new `referee_id` field
+  (UUID v7, placed immediately after `team_b_id`, grouped with the other foreign keys), linking each
+  match to its head referee in `data/referees.json`. This is a purely additive schema change: no
+  existing field, value, or `id` was touched, and no referee data was duplicated inline. The
+  match-to-referee assignment comes from the same canonical
+  [`referees-match-mapping.md`](referees-match-mapping.md) used to build `referees.json` itself — no
+  new research was performed. `docs/DATA_MODEL.md` (`MATCH` schema, ER diagram, and the
+  `referees.json` entity note) and `docs/DATA_SOURCES.md` updated; `tests/MatchesTest.php` updated
+  (`referee_id` added to the required-fields-in-order check, plus a new referential-integrity test
+  against `data/referees.json`).
 
 ## [1.3.0] — 2026-07-21
 

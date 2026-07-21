@@ -8,7 +8,7 @@ reasoning behind the schema. For formatting and naming rules that apply across a
 ## Overview
 
 The data model is a normalized relational structure expressed as JSON files instead of database
-tables. Seven entities, linked exclusively by UUID foreign keys — never a name, code, or other
+tables. Eight entities, linked exclusively by UUID foreign keys — never a name, code, or other
 natural key:
 
 ```mermaid
@@ -22,6 +22,7 @@ erDiagram
     STADIUM ||--o{ MATCH : "hosts"
     TEAM ||--o{ MATCH : "plays as team_a in"
     TEAM ||--o{ MATCH : "plays as team_b in"
+    REFEREE ||--o{ MATCH : "officiates"
 
     COUNTRY {
         uuid id PK
@@ -62,6 +63,12 @@ erDiagram
         uuid tournament_id FK
         uuid country_id FK
     }
+    REFEREE {
+        uuid id PK
+        string code
+        string name
+        string association
+    }
     MATCH {
         uuid id PK
         string code
@@ -69,6 +76,7 @@ erDiagram
         uuid stadium_id FK
         uuid team_a_id FK
         uuid team_b_id FK
+        uuid referee_id FK
         string stage
         string group
         datetime kickoff_at
@@ -248,6 +256,7 @@ one World Cup shouldn't have to load or parse the other six.
 | `tournament_id` | UUID v7 (FK) | References `tournaments.json`. Always matches the file's own year — enforced by the test suite. |
 | `stadium_id` | UUID v7 (FK) | References `stadiums.json`. |
 | `team_a_id` / `team_b_id` | UUID v7 (FK) | Reference `teams.json`. Always two distinct teams. `team_a`/`team_b` preserve OpenFootball's `team1`/`team2` order; they are not "home"/"away" in any meaningful sense, since World Cup matches are played at neutral venues. |
+| `referee_id` | UUID v7 (FK) | References `referees.json`. The match's head referee. |
 | `stage` | enum string | One of `group_stage`, `round_of_32`, `round_of_16`, `quarter_final`, `semi_final`, `third_place`, `final`. Normalized from OpenFootball's inconsistent round labels (`"Quarterfinals"`, `"Quarter-finals"`, `"Quarter-final"` all become `quarter_final`). |
 | `group` | string or `null` | Single letter, `A`–`L` (2002–2022 use `A`–`H`; 2026's 48-team/12-group format uses `A`–`L`). `null` for knockout-stage matches. |
 | `kickoff_at` | ISO 8601 UTC string | See [DATA_SOURCES.md](DATA_SOURCES.md) — sourced from FIFA, not OpenFootball. |
@@ -269,14 +278,14 @@ guessing, so the matches are omitted rather than filled with a guess — see
 
 ### `referees.json` — 147 records
 
-One row per unique World Cup head referee across 2002–2026. Not yet linked to `data/matches/`: this
-entity was introduced as its own milestone, deliberately scoped to the normalized referee list only.
-A `referee_id` foreign key on match records — and the corresponding entry in the entity-relationship
-diagram above — is planned as a separate, future milestone.
+One row per unique World Cup head referee across 2002–2026. Referenced by every
+`data/matches/{year}.json` record via `referee_id` (see above) — this entity was originally
+introduced as its own milestone, deliberately scoped to the normalized referee list only, with the
+match-side link added as a separate, later milestone.
 
 | Field | Type | Description |
 |---|---|---|
-| `id` | UUID v7 | Permanent identifier. Will be used as the FK target once matches reference referees. |
+| `id` | UUID v7 | Permanent identifier. The FK target for every match's `referee_id`. |
 | `code` | string | Lowercase ASCII, hyphen-separated slug generated from `name`, unique across the dataset (e.g. `pierluigi-collina`). |
 | `name` | string | Normalized referee name, with correct diacritics. |
 | `association` | string | The football association the referee is affiliated with, as designated by FIFA — not necessarily an ISO country name (see [`referees-match-mapping.md`](referees-match-mapping.md) for why, e.g. the United Kingdom's four constituent associations). |
@@ -302,6 +311,7 @@ flowchart TD
     S["Stadium: Lusail Iconic Stadium\ncity: Lusail"]
     TA["Team A: Argentina (ARG)"]
     TB["Team B: France (FRA)"]
+    R["Referee: Szymon Marciniak\nassociation: Poland"]
     CS["Country: Qatar"]
     CA["Country: Argentina"]
     CF["Country: France"]
@@ -312,6 +322,7 @@ flowchart TD
     M -->|stadium_id| S
     M -->|team_a_id| TA
     M -->|team_b_id| TB
+    M -->|referee_id| R
     S -->|country_id| CS
     TA -->|country_id| CA
     TB -->|country_id| CF
