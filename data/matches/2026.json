@@ -1955,5 +1955,24 @@
     "extra_time_team_b": null,
     "penalties_team_a": null,
     "penalties_team_b": null
+  },
+  {
+    "id": "019f83a1-b9f7-7b7c-887e-e8456960f7db",
+    "code": "2026-104",
+    "tournament_id": "019f5fd1-c718-7224-ab84-4311f611f16d",
+    "stadium_id": "019f5fb8-8efe-755a-8cb5-bc7864566d6a",
+    "team_a_id": "019f5fa8-72ba-7fd6-81a4-6055a624e9ce",
+    "team_b_id": "019f5fa8-72ba-721a-8aef-e3a2900cae60",
+    "stage": "final",
+    "group": null,
+    "kickoff_at": "2026-07-19T19:00:00Z",
+    "half_time_team_a": 0,
+    "half_time_team_b": 0,
+    "full_time_team_a": 0,
+    "full_time_team_b": 0,
+    "extra_time_team_a": 1,
+    "extra_time_team_b": 0,
+    "penalties_team_a": null,
+    "penalties_team_b": null
   }
 ]
