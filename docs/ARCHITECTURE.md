@@ -106,12 +106,14 @@ file is unaffected.
 
 ```text
 data/
-├── countries.json           # 70 records
+├── countries.json           # 88 records
 ├── confederations.json      # 6 records
 ├── teams.json                # 72 records
 ├── stadiums.json             # 90 records
 ├── tournaments.json          # 7 records
 ├── tournament_hosts.json     # 10 records
+├── referees.json             # 147 records
+├── football_associations.json # 66 records
 └── matches/
     └── 2002.json .. 2026.json  # 486 records total, one file per tournament
 

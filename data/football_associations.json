@@ -1,0 +1,332 @@
+[
+  {
+    "id": "019fb6b5-ffcc-7a11-98de-53407f03ef79",
+    "country_id": "019f5fa8-72ba-7a4f-b995-8db330a7970d",
+    "name": "Algeria"
+  },
+  {
+    "id": "019fb6b5-ffcd-7cf6-85e9-1002c2ddb0fc",
+    "country_id": "019f5fa8-72ba-7181-9be3-887001672b16",
+    "name": "Argentina"
+  },
+  {
+    "id": "019fb6b5-ffce-712b-9533-f31d67dab346",
+    "country_id": "019f5fa8-72ba-7bb8-8796-eec88e4b7a73",
+    "name": "Australia"
+  },
+  {
+    "id": "019fb6b5-ffcf-7022-8800-41a69838f52e",
+    "country_id": "019fb6b5-ffba-727a-9ce8-2e4a789606b5",
+    "name": "Bahrain"
+  },
+  {
+    "id": "019fb6b5-ffd0-75ec-a124-a219d52c1214",
+    "country_id": "019f5fa8-72ba-79b8-b0f2-e60ccf908ab4",
+    "name": "Belgium"
+  },
+  {
+    "id": "019fb6b5-ffd1-76c5-95b2-87212a5b12d5",
+    "country_id": "019fb6b5-ffbb-71f5-8af4-b2d3e4414892",
+    "name": "Benin"
+  },
+  {
+    "id": "019fb6b5-ffd2-7129-947c-f1aa9eb688e5",
+    "country_id": "019fb6b5-ffbc-75fa-80cc-5da384ba6871",
+    "name": "Bolivia"
+  },
+  {
+    "id": "019fb6b5-ffd3-7206-8468-44098fd2574a",
+    "country_id": "019f5fa8-72ba-71ba-a90f-55e29ed633bf",
+    "name": "Brazil"
+  },
+  {
+    "id": "019fb6b5-ffd4-7c63-bde0-fd16a484dd18",
+    "country_id": "019f5fa8-72ba-70e4-93d9-879078323c76",
+    "name": "Canada"
+  },
+  {
+    "id": "019fb6b5-ffd5-7172-acd2-1eae55971f01",
+    "country_id": "019f5fa8-72ba-7e81-8271-e90ad6dcda6b",
+    "name": "Chile"
+  },
+  {
+    "id": "019fb6b5-ffd6-7beb-b544-db6e88030eb5",
+    "country_id": "019f5fa8-72ba-7f47-8d70-9093b3e793a6",
+    "name": "China PR"
+  },
+  {
+    "id": "019fb6b5-ffd7-7ecb-bff8-4e609d59ad9c",
+    "country_id": "019f5fa8-72ba-750f-9785-21cbec6fabc9",
+    "name": "Colombia"
+  },
+  {
+    "id": "019fb6b5-ffd8-790d-94f0-5fa929139a04",
+    "country_id": "019f5fa8-72ba-7094-8c65-75bc63e2e567",
+    "name": "Costa Rica"
+  },
+  {
+    "id": "019fb6b5-ffd9-729a-bb4a-d3519e280869",
+    "country_id": "019f5fa8-72ba-760b-8668-2a4adc95d730",
+    "name": "Denmark"
+  },
+  {
+    "id": "019fb6b5-ffda-7da0-ad6d-8c83d881958f",
+    "country_id": "019f5fa8-72ba-76b2-b727-36b341195d59",
+    "name": "Ecuador"
+  },
+  {
+    "id": "019fb6b5-ffdb-7316-ae52-1d6b8edb9023",
+    "country_id": "019f5fa8-72ba-7219-b526-2dc2016990c3",
+    "name": "Egypt"
+  },
+  {
+    "id": "019fb6b5-ffdc-7749-afa3-82bf43a72f3b",
+    "country_id": "019fb6b5-ffbd-7bde-806b-f73b744bdfad",
+    "name": "El Salvador"
+  },
+  {
+    "id": "019fb6b5-ffdd-7990-9a9e-a174f744cc81",
+    "country_id": "019f5fa8-72ba-7c57-b1ea-eec8d08a4943",
+    "name": "England"
+  },
+  {
+    "id": "019fb6b5-ffde-71bc-87ee-af72adcd46bf",
+    "country_id": "019f5fa8-72ba-7ed6-b0d2-b05a9025c9f9",
+    "name": "France"
+  },
+  {
+    "id": "019fb6b5-ffdf-7d86-b81c-03cad47a2718",
+    "country_id": "019fb6b5-ffbe-73a4-a6f1-bc8696d258a6",
+    "name": "Gabon"
+  },
+  {
+    "id": "019fb6b5-ffe0-7702-a9f7-ac8917fbf47d",
+    "country_id": "019fb6b5-ffbf-7af9-abdf-b26cecc1391a",
+    "name": "Gambia"
+  },
+  {
+    "id": "019fb6b5-ffe1-735d-b593-8ddb954c898a",
+    "country_id": "019f5fa8-72ba-7ada-a751-89f1bbe13f2b",
+    "name": "Germany"
+  },
+  {
+    "id": "019fb6b5-ffe2-77e8-b089-a983bb8cb431",
+    "country_id": "019f5fa8-72ba-7878-bfda-7e904360fb5e",
+    "name": "Greece"
+  },
+  {
+    "id": "019fb6b5-ffe3-7633-8ea1-bf1955c8d7e5",
+    "country_id": "019fb6b5-ffc0-7384-8035-b37922d323b3",
+    "name": "Guatemala"
+  },
+  {
+    "id": "019fb6b5-ffe4-7e92-821e-8cf8641b20ad",
+    "country_id": "019f5fa8-72ba-7f6f-b9b0-07abf6f7f457",
+    "name": "Honduras"
+  },
+  {
+    "id": "019fb6b5-ffe5-7839-819f-cd1160962030",
+    "country_id": "019fb6b5-ffc1-750f-9981-926c5a837d51",
+    "name": "Hungary"
+  },
+  {
+    "id": "019fb6b5-ffe6-767f-bebe-16535baead85",
+    "country_id": "019f5fa8-72ba-7769-b38e-22d2c3f493b5",
+    "name": "Italy"
+  },
+  {
+    "id": "019fb6b5-ffe7-7f29-98d4-bfc3b296d0f7",
+    "country_id": "019f5fa8-72ba-719e-9807-ae346d23dad4",
+    "name": "Ivory Coast"
+  },
+  {
+    "id": "019fb6b5-ffe8-78c2-9a34-86fc197bc961",
+    "country_id": "019fb6b5-ffc2-7cf0-a0c2-91b099445201",
+    "name": "Jamaica"
+  },
+  {
+    "id": "019fb6b5-ffe9-79b3-8cbe-ee596c868d4e",
+    "country_id": "019f5fa8-72ba-7763-80a4-c7a3a11716b6",
+    "name": "Japan"
+  },
+  {
+    "id": "019fb6b5-ffea-711c-b560-c0df22d47438",
+    "country_id": "019f5fa8-72ba-7ad1-afde-f048aeb3ebd5",
+    "name": "Jordan"
+  },
+  {
+    "id": "019fb6b5-ffeb-7cc5-a73f-b4c25babfc9e",
+    "country_id": "019fb6b5-ffc3-72ea-8e0a-e2236fe58456",
+    "name": "Kuwait"
+  },
+  {
+    "id": "019fb6b5-ffec-76a9-84f6-30156dc1c934",
+    "country_id": "019fb6b5-ffc4-7577-8e14-dc357c71c4b0",
+    "name": "Mali"
+  },
+  {
+    "id": "019fb6b5-ffed-7841-9167-73572b8028d6",
+    "country_id": "019fb6b5-ffc5-75bd-99dd-a4acb17e404b",
+    "name": "Mauritania"
+  },
+  {
+    "id": "019fb6b5-ffee-7caa-89dc-f96a99248b2d",
+    "country_id": "019f5fa8-72ba-7d77-a420-42962ea6cd27",
+    "name": "Mexico"
+  },
+  {
+    "id": "019fb6b5-ffef-74bc-b1cd-418743553a29",
+    "country_id": "019f5fa8-72ba-7666-b0b0-cb278b32c7a2",
+    "name": "Morocco"
+  },
+  {
+    "id": "019fb6b5-fff0-75d3-a7fe-af9ca6378b33",
+    "country_id": "019f5fa8-72ba-7079-8999-c352eb098fa8",
+    "name": "Netherlands"
+  },
+  {
+    "id": "019fb6b5-fff1-76e4-899a-04cf7dd78475",
+    "country_id": "019f5fa8-72ba-76c4-86b0-9dea3290c681",
+    "name": "New Zealand"
+  },
+  {
+    "id": "019fb6b5-fff2-78f9-b677-2db7b3eface8",
+    "country_id": "019f5fa8-72ba-751a-84c2-236acfa1c862",
+    "name": "Norway"
+  },
+  {
+    "id": "019fb6b5-fff3-7a9b-91cd-e06f3080e60b",
+    "country_id": "019f5fa8-72ba-7af3-8f08-69a1ae99ac85",
+    "name": "Paraguay"
+  },
+  {
+    "id": "019fb6b5-fff4-74e6-84ec-ad391b9c1983",
+    "country_id": "019f5fa8-72ba-7e46-b520-10b613a9f700",
+    "name": "Poland"
+  },
+  {
+    "id": "019fb6b5-fff5-70f5-9c66-ad790d9fe922",
+    "country_id": "019f5fa8-72ba-7001-9d94-d547423efa1b",
+    "name": "Portugal"
+  },
+  {
+    "id": "019fb6b5-fff6-7ffe-b89d-e7f264efe0d3",
+    "country_id": "019f5fa8-72ba-7720-9f6a-cefd3a797b99",
+    "name": "Qatar"
+  },
+  {
+    "id": "019fb6b5-fff7-74e7-b632-2d5f37c5675d",
+    "country_id": "019fb6b5-ffc6-7149-a827-3038441c4960",
+    "name": "Romania"
+  },
+  {
+    "id": "019fb6b5-fff8-7643-aa29-682356671dbc",
+    "country_id": "019f5fa8-72ba-7861-a999-ba0b15e01d93",
+    "name": "Russia"
+  },
+  {
+    "id": "019fb6b5-fff9-7430-b06e-53a38638e7e1",
+    "country_id": "019f5fa8-72ba-73ea-bad5-85b28cb82d38",
+    "name": "Saudi Arabia"
+  },
+  {
+    "id": "019fb6b5-fffa-7994-ad49-893c6421fde2",
+    "country_id": "019f5fa8-72ba-7c57-b1ea-eec8d08a4943",
+    "name": "Scotland"
+  },
+  {
+    "id": "019fb6b5-fffb-7cdd-803c-52da7ee08a5c",
+    "country_id": "019f5fa8-72ba-7207-ad35-2f2a97090a21",
+    "name": "Senegal"
+  },
+  {
+    "id": "019fb6b5-fffc-77d5-b5b6-06c3a7284792",
+    "country_id": "019f5fa8-72ba-7ea8-80a2-1e73546f4784",
+    "name": "Serbia"
+  },
+  {
+    "id": "019fb6b5-fffd-7999-8644-cf667d77341c",
+    "country_id": "019fb6b5-ffc7-7c41-825a-cafe6721243b",
+    "name": "Seychelles"
+  },
+  {
+    "id": "019fb6b5-fffe-7549-a255-90ab82c8ee78",
+    "country_id": "019fb6b5-ffc8-7bfd-b541-2d24ed8bb298",
+    "name": "Singapore"
+  },
+  {
+    "id": "019fb6b5-ffff-72e5-b3e3-7b2cd3840486",
+    "country_id": "019f5fa8-72ba-7b98-9210-fc389738f16b",
+    "name": "Slovakia"
+  },
+  {
+    "id": "019fb6b6-0000-78fe-b82c-d1bdceb7647b",
+    "country_id": "019f5fa8-72ba-7204-b156-5aa920f71932",
+    "name": "Slovenia"
+  },
+  {
+    "id": "019fb6b6-0001-7dfc-818e-ceb575e79658",
+    "country_id": "019f5fa8-72ba-721e-8325-cb51f77c95bf",
+    "name": "South Africa"
+  },
+  {
+    "id": "019fb6b6-0002-7a72-a686-ceb963a5d1a0",
+    "country_id": "019f5fa8-72ba-7c6e-9fa0-ed147c24e870",
+    "name": "South Korea"
+  },
+  {
+    "id": "019fb6b6-0003-7ca1-b0f4-0132b39340b0",
+    "country_id": "019f5fa8-72ba-7240-b111-dcdea4d90525",
+    "name": "Spain"
+  },
+  {
+    "id": "019fb6b6-0004-7270-acb2-28dc3fc97990",
+    "country_id": "019f5fa8-72ba-71a7-a2c3-92113305106f",
+    "name": "Sweden"
+  },
+  {
+    "id": "019fb6b6-0005-78d4-ba64-98c32c4d99e7",
+    "country_id": "019f5fa8-72ba-7a86-b4e0-2ab00f628542",
+    "name": "Switzerland"
+  },
+  {
+    "id": "019fb6b6-0006-724b-872b-6ffee53983f0",
+    "country_id": "019f5fa8-72ba-70da-929a-27868fe9e1e3",
+    "name": "Tunisia"
+  },
+  {
+    "id": "019fb6b6-0007-72e0-88f4-1d9f3021ae98",
+    "country_id": "019f5fa8-72ba-746f-9d38-27579bfc8b4a",
+    "name": "Turkey"
+  },
+  {
+    "id": "019fb6b6-0008-7cba-8bf8-a695a73d0798",
+    "country_id": "019fb6b5-ffc9-79a1-a669-ad8df431d18a",
+    "name": "United Arab Emirates"
+  },
+  {
+    "id": "019fb6b6-0009-746d-ba4f-263ed29a968e",
+    "country_id": "019f5fa8-72ba-730b-8656-9c31b051c82c",
+    "name": "United States"
+  },
+  {
+    "id": "019fb6b6-000a-7efa-84f7-f95b43b35712",
+    "country_id": "019f5fa8-72ba-738c-81c4-0ae24a59e7c7",
+    "name": "Uruguay"
+  },
+  {
+    "id": "019fb6b6-000b-7cf6-a046-a0406527f4b9",
+    "country_id": "019f5fa8-72ba-720c-af17-c2b2176f64a2",
+    "name": "Uzbekistan"
+  },
+  {
+    "id": "019fb6b6-000c-7268-bd49-3dac6746f20c",
+    "country_id": "019fb6b5-ffca-7b21-a35e-ba85b6bb2b96",
+    "name": "Venezuela"
+  },
+  {
+    "id": "019fb6b6-000d-72c1-bd53-d5e40cd3cadc",
+    "country_id": "019fb6b5-ffcb-7071-bad0-ea8cab718624",
+    "name": "Zambia"
+  }
+]

@@ -91,6 +91,16 @@ function referees(): array
 }
 
 /**
+ * The decoded, memoized contents of data/football_associations.json.
+ */
+function footballAssociations(): array
+{
+    static $footballAssociations = null;
+
+    return $footballAssociations ??= loadJson('football_associations.json');
+}
+
+/**
  * The tournament years with a matches file under data/matches/.
  */
 function matchYears(): array

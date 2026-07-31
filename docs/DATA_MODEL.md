@@ -8,7 +8,7 @@ reasoning behind the schema. For formatting and naming rules that apply across a
 ## Overview
 
 The data model is a normalized relational structure expressed as JSON files instead of database
-tables. Eight entities, linked exclusively by UUID foreign keys — never a name, code, or other
+tables. Nine entities, linked exclusively by UUID foreign keys — never a name, code, or other
 natural key:
 
 ```mermaid
@@ -16,12 +16,14 @@ erDiagram
     COUNTRY ||--o{ TEAM : "fields a"
     COUNTRY ||--o{ STADIUM : "is located in"
     COUNTRY ||--o{ TOURNAMENT_HOST : "hosts as"
+    COUNTRY ||--o{ FOOTBALL_ASSOCIATION : "is home to"
     CONFEDERATION ||--o{ TEAM : "governs"
     TOURNAMENT ||--o{ TOURNAMENT_HOST : "is hosted by"
     TOURNAMENT ||--o{ MATCH : "contains"
     STADIUM ||--o{ MATCH : "hosts"
     TEAM ||--o{ MATCH : "plays as team_a in"
     TEAM ||--o{ MATCH : "plays as team_b in"
+    FOOTBALL_ASSOCIATION ||--o{ REFEREE : "referee is affiliated with"
     REFEREE ||--o{ MATCH : "officiates"
 
     COUNTRY {
@@ -63,11 +65,16 @@ erDiagram
         uuid tournament_id FK
         uuid country_id FK
     }
+    FOOTBALL_ASSOCIATION {
+        uuid id PK
+        uuid country_id FK
+        string name
+    }
     REFEREE {
         uuid id PK
         string code
         string name
-        string association
+        uuid association_id FK
     }
     MATCH {
         uuid id PK
@@ -128,11 +135,16 @@ IDs are permanent: once a record has a UUID, later corrections to its other fiel
 
 ## Entities
 
-### `countries.json` — 70 records
+### `countries.json` — 88 records
 
-One row per sovereign or historical entity referenced by at least one team. Not every country in the
-world — only countries that have fielded a World Cup team in 2002–2026, or (for `Serbia and
-Montenegro`) fielded one and no longer exists.
+One row per sovereign or historical entity referenced by at least one team or football association.
+Not every country in the world — only countries that have fielded a World Cup team in 2002–2026
+(for `Serbia and Montenegro`, fielded one and no longer exists), **or** are the country a
+`football_associations.json` referee-affiliation row belongs to (see below). The latter 18 records
+(Bahrain, Benin, Bolivia, El Salvador, Gabon, Gambia, Guatemala, Hungary, Jamaica, Kuwait, Mali,
+Mauritania, Romania, Seychelles, Singapore, United Arab Emirates, Venezuela, Zambia) never fielded a
+World Cup team in this dataset's scope — they exist here solely because a head referee's national
+football association is affiliated with them.
 
 | Field | Type | Description |
 |---|---|---|
@@ -278,6 +290,25 @@ guessing, so the matches are omitted rather than filled with a guess — see
 [CONVENTIONS.md](CONVENTIONS.md) and the match-generation history for the reasoning. 486 is therefore
 64 × 6 (2002–2022) + 102 (2026's 104 scheduled matches minus these 2).
 
+### `football_associations.json` — 66 records
+
+One row per distinct national football association referenced by at least one `referees.json`
+record's affiliation. A football association is not the same concept as a sovereign country — the
+same separation `teams.json` already applies between a team and its country (see
+[Team and country naming](CONVENTIONS.md#team-and-country-naming)) — so England and Scotland are two
+separate association records, both referencing the single United Kingdom (`GB`) country record.
+Only associations that actually appear in `referees.json` exist here; the dataset does not
+speculatively include every FIFA member association, the same demand-driven scoping principle
+`countries.json` already follows.
+
+| Field | Type | Description |
+|---|---|---|
+| `id` | UUID v7 | Permanent identifier. The FK target for every referee's `association_id`. |
+| `country_id` | UUID v7 (FK) | References `countries.json`. |
+| `name` | string | The football association name, as designated by FIFA — not necessarily an ISO country name (see [`referees-match-mapping.md`](referees-match-mapping.md) for why, e.g. the United Kingdom's constituent associations). Carried over verbatim from `referees.json`'s former free-text `association` field — see below. |
+
+Sorted by `name` ascending.
+
 ### `referees.json` — 147 records
 
 One row per unique World Cup head referee across 2002–2026. Referenced by every
@@ -290,16 +321,22 @@ match-side link added as a separate, later milestone.
 | `id` | UUID v7 | Permanent identifier. The FK target for every match's `referee_id`. |
 | `code` | string | Lowercase ASCII, hyphen-separated slug generated from `name`, unique across the dataset (e.g. `pierluigi-collina`). |
 | `name` | string | Normalized referee name, with correct diacritics. |
-| `association` | string | The football association the referee is affiliated with, as designated by FIFA — not necessarily an ISO country name (see [`referees-match-mapping.md`](referees-match-mapping.md) for why, e.g. the United Kingdom's four constituent associations). |
+| `association_id` | UUID v7 (FK) | References `football_associations.json`. |
 
 Sorted by `name` ascending. Built from
 [`referees-match-mapping.md`](referees-match-mapping.md), the canonical, already-researched
 match-by-match referee mapping — one row per unique `code` found there. One referee in that source,
 Alireza Faghani, legitimately officiated under two different associations across tournaments (Iran
 through 2022, Australia from 2026, following a real-world federation switch); since this dataset
-holds exactly one row per person, his single `association` value here is his most recent one
-(`Australia`), not a per-tournament history — see [DATA_SOURCES.md](DATA_SOURCES.md) for the full
-sourcing.
+holds exactly one row per person, his single `association_id` here points to his most recent
+association (`Australia`), not a per-tournament history — see [DATA_SOURCES.md](DATA_SOURCES.md) for
+the full sourcing.
+
+`association_id` was originally a free-text `association` string (FIFA's own association
+designation, verbatim). It was normalized into its own entity in a later milestone once a consumer
+needed to resolve a referee's association back to a real country (e.g. to display a national flag)
+— see [DATA_SOURCES.md](DATA_SOURCES.md) for why this was deliberately *not* done when `referees.json`
+was first introduced, and what changed.
 
 ## Cross-entity example
 
@@ -313,10 +350,12 @@ flowchart TD
     S["Stadium: Lusail Iconic Stadium\ncity: Lusail"]
     TA["Team A: Argentina (ARG)"]
     TB["Team B: France (FRA)"]
-    R["Referee: Szymon Marciniak\nassociation: Poland"]
+    R["Referee: Szymon Marciniak"]
+    FA["Football Association: Poland"]
     CS["Country: Qatar"]
     CA["Country: Argentina"]
     CF["Country: France"]
+    CP["Country: Poland"]
     KA["Confederation: CONMEBOL"]
     KF["Confederation: UEFA"]
 
@@ -325,6 +364,8 @@ flowchart TD
     M -->|team_a_id| TA
     M -->|team_b_id| TB
     M -->|referee_id| R
+    R -->|association_id| FA
+    FA -->|country_id| CP
     S -->|country_id| CS
     TA -->|country_id| CA
     TB -->|country_id| CF
