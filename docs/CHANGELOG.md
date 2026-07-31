@@ -7,7 +7,45 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Added
+
+- `data/football_associations.json` — a new, standalone dataset of 66 national football
+  associations, one per distinct `association` value previously stored as free text on
+  `referees.json`. Each record has `id` (UUID v7), `country_id` (UUID v7, FK to `countries.json`),
+  and `name` (FIFA's own association designation, carried over verbatim — no new research). Sorted
+  by `name` ascending. England and Scotland resolve to the single United Kingdom country record,
+  the same separation `teams.json` already applies between a team and its country; `China PR`
+  resolves to the existing `China` country record.
+- `data/countries.json` — 18 new records for countries that have never fielded a World Cup team in
+  this dataset's scope, but are the home country of a referee's national football association and
+  so are now needed as `football_associations.json`'s `country_id` target: Bahrain, Benin, Bolivia,
+  El Salvador, Gabon, Gambia, Guatemala, Hungary, Jamaica, Kuwait, Mali, Mauritania, Romania,
+  Seychelles, Singapore, United Arab Emirates, Venezuela, Zambia (70 → 88 records). Encoded the same
+  way as the existing 70: `iso2`/`iso3` from the ISO 3166-1 standard, `official_name` from the same
+  standard's official/long-form naming convention — see
+  [DATA_SOURCES.md](DATA_SOURCES.md#football-association-country-linkage-existing-referee-sourcing--iso-3166-1-reference).
+- `tests/FootballAssociationsTest.php` — new, mirroring the existing per-dataset test file pattern
+  (valid JSON, exact record count, field order, unique/valid UUID v7 `id`, unique non-empty `name`,
+  `country_id` referential integrity, sort order). `tests/Helpers.php` gained a memoized
+  `footballAssociations()` loader.
+
+### Changed
+
+- `data/referees.json` — the free-text `association` field is replaced by `association_id` (UUID
+  v7, FK to the new `football_associations.json`). No other field changed; every record's `id`,
+  `code`, and `name` are untouched, and the file's `name`-ascending sort order is unaffected. This is
+  a deliberate reversal of a limit recorded when `referees.json` was first introduced (1.4.0) —
+  `association` was originally kept as a free-form string specifically so normalizing it would never
+  require `countries.json`'s scope to grow. That trade-off was revisited once a real downstream
+  consumer needed to resolve a referee's association back to an actual country (to display a
+  national flag) — see [DATA_SOURCES.md](DATA_SOURCES.md#what-is-never-used) for the full reasoning.
+- `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, `docs/CONVENTIONS.md`, `docs/ARCHITECTURE.md`,
+  `README.md` — updated for the new entity, the `countries.json` record count, and the
+  `referees.json` schema change (ERD, entity tables, sorting table, repository layout, dataset
+  statistics, data source summary).
+- `tests/RefereesTest.php` — the required-fields-in-order check and the former non-empty-`association`
+  check are updated for `association_id`; a new referential-integrity check
+  (`association_id` references an existing `football_associations.json` row) replaces it.
 
 ## [1.5.0] — 2026-07-21
 

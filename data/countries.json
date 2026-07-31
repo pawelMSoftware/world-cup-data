@@ -1,5 +1,12 @@
 [
   {
+    "id": "019fb6b5-ffc9-79a1-a669-ad8df431d18a",
+    "iso2": "AE",
+    "iso3": "ARE",
+    "name": "United Arab Emirates",
+    "official_name": "United Arab Emirates"
+  },
+  {
     "id": "019f5fa8-72ba-7241-93d7-9b0331b6d41e",
     "iso2": "AO",
     "iso3": "AGO",
@@ -40,6 +47,27 @@
     "iso3": "BEL",
     "name": "Belgium",
     "official_name": "Kingdom of Belgium"
+  },
+  {
+    "id": "019fb6b5-ffba-727a-9ce8-2e4a789606b5",
+    "iso2": "BH",
+    "iso3": "BHR",
+    "name": "Bahrain",
+    "official_name": "Kingdom of Bahrain"
+  },
+  {
+    "id": "019fb6b5-ffbb-71f5-8af4-b2d3e4414892",
+    "iso2": "BJ",
+    "iso3": "BEN",
+    "name": "Benin",
+    "official_name": "Republic of Benin"
+  },
+  {
+    "id": "019fb6b5-ffbc-75fa-80cc-5da384ba6871",
+    "iso2": "BO",
+    "iso3": "BOL",
+    "name": "Bolivia",
+    "official_name": "Plurinational State of Bolivia"
   },
   {
     "id": "019f5fa8-72ba-71ba-a90f-55e29ed633bf",
@@ -189,6 +217,13 @@
     "official_name": "French Republic"
   },
   {
+    "id": "019fb6b5-ffbe-73a4-a6f1-bc8696d258a6",
+    "iso2": "GA",
+    "iso3": "GAB",
+    "name": "Gabon",
+    "official_name": "Gabonese Republic"
+  },
+  {
     "id": "019f5fa8-72ba-7c57-b1ea-eec8d08a4943",
     "iso2": "GB",
     "iso3": "GBR",
@@ -203,11 +238,25 @@
     "official_name": "Republic of Ghana"
   },
   {
+    "id": "019fb6b5-ffbf-7af9-abdf-b26cecc1391a",
+    "iso2": "GM",
+    "iso3": "GMB",
+    "name": "Gambia",
+    "official_name": "Republic of The Gambia"
+  },
+  {
     "id": "019f5fa8-72ba-7878-bfda-7e904360fb5e",
     "iso2": "GR",
     "iso3": "GRC",
     "name": "Greece",
     "official_name": "Hellenic Republic"
+  },
+  {
+    "id": "019fb6b5-ffc0-7384-8035-b37922d323b3",
+    "iso2": "GT",
+    "iso3": "GTM",
+    "name": "Guatemala",
+    "official_name": "Republic of Guatemala"
   },
   {
     "id": "019f5fa8-72ba-7f6f-b9b0-07abf6f7f457",
@@ -229,6 +278,13 @@
     "iso3": "HTI",
     "name": "Haiti",
     "official_name": "Republic of Haiti"
+  },
+  {
+    "id": "019fb6b5-ffc1-750f-9981-926c5a837d51",
+    "iso2": "HU",
+    "iso3": "HUN",
+    "name": "Hungary",
+    "official_name": "Hungary"
   },
   {
     "id": "019f5fa8-72ba-7b80-b824-d3f74d469a9b",
@@ -266,6 +322,13 @@
     "official_name": "Italian Republic"
   },
   {
+    "id": "019fb6b5-ffc2-7cf0-a0c2-91b099445201",
+    "iso2": "JM",
+    "iso3": "JAM",
+    "name": "Jamaica",
+    "official_name": "Jamaica"
+  },
+  {
     "id": "019f5fa8-72ba-7ad1-afde-f048aeb3ebd5",
     "iso2": "JO",
     "iso3": "JOR",
@@ -294,11 +357,32 @@
     "official_name": "Republic of Korea"
   },
   {
+    "id": "019fb6b5-ffc3-72ea-8e0a-e2236fe58456",
+    "iso2": "KW",
+    "iso3": "KWT",
+    "name": "Kuwait",
+    "official_name": "State of Kuwait"
+  },
+  {
     "id": "019f5fa8-72ba-7666-b0b0-cb278b32c7a2",
     "iso2": "MA",
     "iso3": "MAR",
     "name": "Morocco",
     "official_name": "Kingdom of Morocco"
+  },
+  {
+    "id": "019fb6b5-ffc4-7577-8e14-dc357c71c4b0",
+    "iso2": "ML",
+    "iso3": "MLI",
+    "name": "Mali",
+    "official_name": "Republic of Mali"
+  },
+  {
+    "id": "019fb6b5-ffc5-75bd-99dd-a4acb17e404b",
+    "iso2": "MR",
+    "iso3": "MRT",
+    "name": "Mauritania",
+    "official_name": "Islamic Republic of Mauritania"
   },
   {
     "id": "019f5fa8-72ba-7d77-a420-42962ea6cd27",
@@ -378,6 +462,13 @@
     "official_name": "State of Qatar"
   },
   {
+    "id": "019fb6b5-ffc6-7149-a827-3038441c4960",
+    "iso2": "RO",
+    "iso3": "ROU",
+    "name": "Romania",
+    "official_name": "Romania"
+  },
+  {
     "id": "019f5fa8-72ba-7ea8-80a2-1e73546f4784",
     "iso2": "RS",
     "iso3": "SRB",
@@ -399,11 +490,25 @@
     "official_name": "Kingdom of Saudi Arabia"
   },
   {
+    "id": "019fb6b5-ffc7-7c41-825a-cafe6721243b",
+    "iso2": "SC",
+    "iso3": "SYC",
+    "name": "Seychelles",
+    "official_name": "Republic of Seychelles"
+  },
+  {
     "id": "019f5fa8-72ba-71a7-a2c3-92113305106f",
     "iso2": "SE",
     "iso3": "SWE",
     "name": "Sweden",
     "official_name": "Kingdom of Sweden"
+  },
+  {
+    "id": "019fb6b5-ffc8-7bfd-b541-2d24ed8bb298",
+    "iso2": "SG",
+    "iso3": "SGP",
+    "name": "Singapore",
+    "official_name": "Republic of Singapore"
   },
   {
     "id": "019f5fa8-72ba-7204-b156-5aa920f71932",
@@ -425,6 +530,13 @@
     "iso3": "SEN",
     "name": "Senegal",
     "official_name": "Republic of Senegal"
+  },
+  {
+    "id": "019fb6b5-ffbd-7bde-806b-f73b744bdfad",
+    "iso2": "SV",
+    "iso3": "SLV",
+    "name": "El Salvador",
+    "official_name": "Republic of El Salvador"
   },
   {
     "id": "019f5fa8-72ba-7b6a-b283-d983cb17dc2c",
@@ -483,10 +595,24 @@
     "official_name": "Republic of Uzbekistan"
   },
   {
+    "id": "019fb6b5-ffca-7b21-a35e-ba85b6bb2b96",
+    "iso2": "VE",
+    "iso3": "VEN",
+    "name": "Venezuela",
+    "official_name": "Bolivarian Republic of Venezuela"
+  },
+  {
     "id": "019f5fa8-72ba-721e-8325-cb51f77c95bf",
     "iso2": "ZA",
     "iso3": "ZAF",
     "name": "South Africa",
     "official_name": "Republic of South Africa"
+  },
+  {
+    "id": "019fb6b5-ffcb-7071-bad0-ea8cab718624",
+    "iso2": "ZM",
+    "iso3": "ZMB",
+    "name": "Zambia",
+    "official_name": "Republic of Zambia"
   }
 ]

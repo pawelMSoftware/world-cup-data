@@ -110,8 +110,8 @@ covers it directly for 2026.
 
 ## Referee identity: FIFA, RSSSF, and Wikipedia
 
-`referees.json` (`name`, `association`) is sourced the same way as attendance: researched as its own
-milestone and fully documented, match by match, in
+`referees.json` (`name`) and `football_associations.json` (`name`) are sourced the same way as
+attendance: researched as its own milestone and fully documented, match by match, in
 [`referees-match-mapping.md`](referees-match-mapping.md) — that document is the canonical source;
 `referees.json`'s values were copied from it verbatim (one row per unique referee found there), not
 re-derived. OpenFootball has no referee data at all.
@@ -124,9 +124,33 @@ breakdown):
 3. **FIFA** live competition API (`Officials`, `OfficialType: 1`, head referee only) — primary for
    2026.
 
-`association` preserves FIFA's own association designation verbatim (not an ISO country code — see
-[`referees-match-mapping.md`](referees-match-mapping.md) for why, e.g. the United Kingdom's four
-constituent football associations).
+`football_associations.json`'s `name` preserves FIFA's own association designation verbatim (not an
+ISO country code — see [`referees-match-mapping.md`](referees-match-mapping.md) for why, e.g. the
+United Kingdom's four constituent football associations) — this is unchanged from when the same
+value lived directly on `referees.json` as `association`; normalizing it into its own entity (see
+below) did not require re-sourcing it.
+
+## Football association country linkage: existing referee sourcing + ISO 3166-1 reference
+
+`football_associations.json`'s `country_id` and the 18 `countries.json` records added to support it
+(Bahrain, Benin, Bolivia, El Salvador, Gabon, Gambia, Guatemala, Hungary, Jamaica, Kuwait, Mali,
+Mauritania, Romania, Seychelles, Singapore, United Arab Emirates, Venezuela, Zambia) required no new
+factual research — every association name was already sourced (see above), and this step only
+resolves each one to the country it belongs to:
+
+- Where an association's FIFA designation already matches an existing `countries.json` `name`
+  (e.g. `Poland`), it references that row directly.
+- Where it doesn't, because the FIFA designation isn't a country name in the first place (`England`,
+  `Scotland` — the United Kingdom's constituent associations) or uses a different label than this
+  dataset's existing country record (`China PR` → the existing `China` row), it resolves to the
+  correct existing country by the same reasoning [`referees-match-mapping.md`](referees-match-mapping.md)
+  already documents for exactly this kind of designation.
+- Where no existing `countries.json` row corresponds to the association's country at all — a country
+  that has never fielded a World Cup team in this dataset's scope — a new record is added, encoded
+  the same way the original 70 were: `iso2` / `iso3` from the ISO 3166-1 standard, `official_name`
+  from the same standard's official/long-form naming convention (see [Summary](#summary) below and
+  [CONVENTIONS.md](CONVENTIONS.md#team-and-country-naming)). `name` is the association's own FIFA
+  designation, already sourced — no separate lookup needed.
 
 ## Disciplinary cards: FIFA, RSSSF, and Wikipedia
 
@@ -163,7 +187,9 @@ player, the standard convention also used by RSSSF and Wikipedia.
 | `kickoff_at` (all years) | FIFA (`api.fifa.com`) | authoritative; OpenFootball's local time is not used |
 | `teams.json`'s `confederation_id` | FIFA (`api.fifa.com`) | `GET /api/v3/teams/{IdTeam}`; OpenFootball has no confederation data |
 | `matches[].attendance` | FIFA, RSSSF, Wikipedia | per-tournament priority documented above and in [`attendance-match-mapping.md`](attendance-match-mapping.md) |
-| `referees.json` (`name`, `association`) | RSSSF, Wikipedia, FIFA | per-tournament priority documented above and in [`referees-match-mapping.md`](referees-match-mapping.md) |
+| `referees.json` (`name`), `football_associations.json` (`name`) | RSSSF, Wikipedia, FIFA | per-tournament priority documented above and in [`referees-match-mapping.md`](referees-match-mapping.md) |
+| `football_associations.json`'s `country_id`, the 18 `countries.json` records added to support it | Existing referee sourcing (above) + ISO 3166-1 reference | see [Football association country linkage](#football-association-country-linkage-existing-referee-sourcing--iso-3166-1-reference) above |
+| `referees.json`'s `association_id` | Derived | foreign key resolving each referee to their `football_associations.json` row; no new sourcing, replaces the former free-text `association` field |
 | `matches[].referee_id` | Derived | foreign key resolving each match to its `referees.json` row; the match-to-referee assignment itself comes from [`referees-match-mapping.md`](referees-match-mapping.md), same as `referees.json` above |
 | `matches[].cards` | FIFA, RSSSF, Wikipedia | per-tournament priority documented above and in [`cards-match-mapping.md`](cards-match-mapping.md) |
 | Dataset verification | FIFA (`api.fifa.com`) | read-only audit against teams/stadium/stage/score, see [DATASET_AUDIT.md](DATASET_AUDIT.md) |
@@ -182,9 +208,17 @@ in this project.
 against, for two reasons: coverage is inconsistent for the 2026 tournament if the *full* officiating
 crew is wanted (most played matches expose only the head referee, not assistants/VAR), and FIFA's
 `Officials` nationalities use association codes for many countries with no World Cup team in this
-dataset. `referees.json` sidesteps both: it deliberately stores only the head referee
-(`OfficialType: 1`), which is consistently available across every tournament, and `association` is
-stored as its own free-form string rather than a `countries.json` foreign key, so it never needs
-`countries.json`'s scope to grow. `data/matches/{year}.json`'s `referee_id` foreign key, resolving
-each match to its `referees.json` row, was added in a later milestone once the standalone dataset
-was in place.
+dataset. `referees.json` sidesteps the first: it deliberately stores only the head referee
+(`OfficialType: 1`), which is consistently available across every tournament. `data/matches/{year}.json`'s
+`referee_id` foreign key, resolving each match to its `referees.json` row, was added in a later
+milestone once the standalone dataset was in place.
+
+The second reason originally shaped `association` as its own free-form string rather than a
+`countries.json` foreign key, specifically so normalizing referees would never need
+`countries.json`'s scope to grow beyond World Cup-participating countries. That limit was revisited
+and lifted in a later milestone, once a real downstream consumer (the frontend, wanting to resolve
+a referee's national flag) needed a genuine `association` → `country` link, not just a display
+string. `countries.json`'s scope growing to include the 18 associations' countries was the accepted,
+understood cost of that — not an oversight of the original limit, a deliberate reconsideration of
+it. See [Football association country linkage](#football-association-country-linkage-existing-referee-sourcing--iso-3166-1-reference)
+above for exactly what was added and how it was sourced.

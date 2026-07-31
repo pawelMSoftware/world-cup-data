@@ -16,7 +16,7 @@ it('contains exactly 147 records', function (): void {
 
 it('has exactly the required fields, in order, on every record', function (): void {
     foreach (referees() as $referee) {
-        expect(array_keys($referee))->toBe(['id', 'code', 'name', 'association']);
+        expect(array_keys($referee))->toBe(['id', 'code', 'name', 'association_id']);
     }
 });
 
@@ -50,9 +50,11 @@ it('has a unique name for every record', function (): void {
     expect(duplicateValues(array_column(referees(), 'name')))->toBeEmpty();
 });
 
-it('has a non-empty association for every record', function (): void {
+it('references an existing football association for every association_id', function (): void {
+    $associationIds = array_column(footballAssociations(), 'id');
+
     foreach (referees() as $referee) {
-        expect($referee['association'])->toBeString()->not->toBeEmpty();
+        expect($associationIds)->toContain($referee['association_id']);
     }
 });
 

@@ -72,13 +72,14 @@ record is present. See [Missing data](docs/DATASET_AUDIT.md#missing-data) in the
 
 ```text
 data/
-├── countries.json           # 70 countries
+├── countries.json           # 88 countries
 ├── confederations.json      # 6 FIFA confederations
 ├── teams.json                # 72 national teams
 ├── stadiums.json             # 90 stadiums
 ├── tournaments.json          # 7 tournaments
 ├── tournament_hosts.json     # 10 tournament/host-country pairs
 ├── referees.json             # 147 unique referees, linked from matches via referee_id
+├── football_associations.json # 66 national football associations, linked from referees via association_id
 └── matches/
     └── {year}.json           # 488 matches total, one file per tournament
 
@@ -110,12 +111,14 @@ erDiagram
     COUNTRY ||--o{ TEAM : "fields a"
     COUNTRY ||--o{ STADIUM : "is located in"
     COUNTRY ||--o{ TOURNAMENT_HOST : "hosts as"
+    COUNTRY ||--o{ FOOTBALL_ASSOCIATION : "is home to"
     CONFEDERATION ||--o{ TEAM : "governs"
     TOURNAMENT ||--o{ TOURNAMENT_HOST : "is hosted by"
     TOURNAMENT ||--o{ MATCH : "contains"
     STADIUM ||--o{ MATCH : "hosts"
     TEAM ||--o{ MATCH : "plays as team_a in"
     TEAM ||--o{ MATCH : "plays as team_b in"
+    FOOTBALL_ASSOCIATION ||--o{ REFEREE : "referee is affiliated with"
     REFEREE ||--o{ MATCH : "officiates"
 ```
 
@@ -127,7 +130,7 @@ is, is in [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md).
 
 | Dataset | Records |
 |---|---:|
-| Countries | 70 |
+| Countries | 88 |
 | Confederations | 6 |
 | Teams | 72 |
 | Stadiums | 90 |
@@ -135,6 +138,7 @@ is, is in [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md).
 | Tournament hosts | 10 |
 | Matches | 488 |
 | Referees | 147 |
+| Football associations | 66 |
 
 ## Data sources
 
@@ -144,7 +148,8 @@ is, is in [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md).
 | Authoritative for kickoff time and confederation | [FIFA competition API](https://api.fifa.com) | `kickoff_at` (wins outright if it disagrees with OpenFootball's local time) and `teams.json`'s `confederation_id` (OpenFootball has no confederation data at all). |
 | Metadata gap-filling | Wikidata, then Wikipedia | Stadium coordinates for 2002–2022 only, because OpenFootball has none for those years. |
 | Match attendance | FIFA, RSSSF, then Wikipedia (priority varies by tournament) | `matches[].attendance`, since OpenFootball carries no attendance data at all. See [`docs/attendance-match-mapping.md`](docs/attendance-match-mapping.md) for the full per-match sourcing. |
-| Referee identity | RSSSF, Wikipedia, then FIFA (priority varies by tournament) | `referees.json` (`name`, `association`) and `matches[].referee_id`, since OpenFootball carries no referee data at all. See [`docs/referees-match-mapping.md`](docs/referees-match-mapping.md) for the full per-match sourcing. |
+| Referee identity | RSSSF, Wikipedia, then FIFA (priority varies by tournament) | `referees.json` (`name`), `football_associations.json` (`name`), and `matches[].referee_id`, since OpenFootball carries no referee data at all. See [`docs/referees-match-mapping.md`](docs/referees-match-mapping.md) for the full per-match sourcing. |
+| Football association country linkage | Existing referee sourcing + ISO 3166-1 reference | `football_associations.json`'s `country_id` and the 18 `countries.json` records added to support it. See [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md#football-association-country-linkage-existing-referee-sourcing--iso-3166-1-reference). |
 | Disciplinary cards | RSSSF, Wikipedia, then FIFA (priority varies by tournament) | `matches[].cards`, since OpenFootball carries no disciplinary data at all. See [`docs/cards-match-mapping.md`](docs/cards-match-mapping.md) for the full per-match sourcing. |
 
 Outside of these documented roles, no other third-party source (news sites, other football
