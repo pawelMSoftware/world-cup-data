@@ -7,6 +7,10 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
+No changes yet.
+
+## [1.6.0] — 2026-07-31
+
 ### Added
 
 - `data/football_associations.json` — a new, standalone dataset of 66 national football
