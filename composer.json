@@ -26,7 +26,7 @@
         "php": "^8.5"
     },
     "require-dev": {
-        "pestphp/pest": "^4.0"
+        "pestphp/pest": "^5.3"
     },
     "autoload-dev": {
         "files": [
