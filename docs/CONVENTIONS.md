@@ -28,6 +28,9 @@ inconsistent with what you'd expect, check here before assuming it's a bug.
 - All timestamps are stored in UTC, in ISO 8601 extended format with a literal `Z` suffix:
   `YYYY-MM-DDTHH:MM:SSZ`.
 - No local time is ever stored, and no date/time is ever split across separate fields.
+- To show a kickoff in local time, convert `kickoff_at` with its stadium's `timezone` (an IANA
+  zone, e.g. `America/New_York`) — the zone, not a fixed offset, so DST and historical offset
+  changes are applied correctly for that date.
 - Example: `"kickoff_at": "2022-12-18T15:00:00Z"`.
 - `kickoff_at` values are sourced from official FIFA competition data, not OpenFootball — see
   [DATA_SOURCES.md](DATA_SOURCES.md) for why.

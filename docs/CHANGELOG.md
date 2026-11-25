@@ -7,7 +7,15 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
-No changes yet.
+### Added
+
+- `stadiums.json`: `timezone` on every record — the IANA time zone of the stadium's location (e.g.
+  `Asia/Qatar`, `America/Manaus`), after `longitude`. Derived from the existing coordinates (IANA tz
+  database boundaries via `timezonefinder`), so consumers can show each match's official local date
+  and time from its UTC `kickoff_at`; `kickoff_at` itself stays UTC. Covers 23 distinct zones,
+  including Brazil's 6 (2014), Russia's 5 (2018) and the US's 3 (2026).
+- Tests: `timezone` is required and a valid IANA identifier, and every one of the 488 kickoffs falls
+  between 11:00 and 22:59 in its stadium's zone (all currently land between 12:00 and 22:59).
 
 ## [1.6.0] — 2026-07-31
 

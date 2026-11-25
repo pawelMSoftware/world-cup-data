@@ -8,7 +8,7 @@ it('is valid JSON', function (): void {
 
 it('has all required fields on every record', function (): void {
     foreach (stadiums() as $stadium) {
-        expect($stadium)->toHaveKeys(['id', 'country_id', 'code', 'name', 'city', 'latitude', 'longitude']);
+        expect($stadium)->toHaveKeys(['id', 'country_id', 'code', 'name', 'city', 'latitude', 'longitude', 'timezone']);
     }
 });
 
@@ -88,5 +88,29 @@ it('stores latitude and longitude with a precision of exactly 6 decimal places',
         foreach ($rawValues as $value) {
             expect(decimalPlaces($value))->toBe(6, "Expected 6 decimal places for {$field}, got \"{$value}\"");
         }
+    }
+});
+
+it('has a valid IANA time zone identifier for every record', function (): void {
+    $identifiers = timezone_identifiers_list();
+
+    foreach (stadiums() as $stadium) {
+        expect(in_array($stadium['timezone'], $identifiers, true))
+            ->toBeTrue("Unknown time zone for {$stadium['code']}: {$stadium['timezone']}");
+    }
+});
+
+it('puts every kickoff at a plausible local hour in its stadium time zone', function (): void {
+    // The time zones are derived from each stadium's coordinates; this is the cross-check against
+    // real data: a wrong zone shows up as a kickoff at an implausible local hour (night/early morning).
+    $timezones = array_column(stadiums(), 'timezone', 'id');
+
+    foreach (matches() as $match) {
+        $local = (new DateTimeImmutable($match['kickoff_at']))
+            ->setTimezone(new DateTimeZone($timezones[$match['stadium_id']]));
+        $hour = (int) $local->format('G');
+
+        expect($hour)->toBeGreaterThanOrEqual(11, "{$match['code']} kicks off at {$local->format('H:i')} local")
+            ->toBeLessThanOrEqual(22, "{$match['code']} kicks off at {$local->format('H:i')} local");
     }
 });

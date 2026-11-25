@@ -84,6 +84,18 @@ geographic coordinates:
 - Wikidata/Wikipedia were never used for team names, scores, dates, stages, or any field OpenFootball
   or FIFA already provides — this project does not treat either as a general-purpose reference.
 
+### Stadium time zones (derived from coordinates)
+
+`stadiums.json`'s `timezone` is not sourced from any of the providers above: it is derived from each
+stadium's own `latitude`/`longitude` by a point-in-polygon lookup against the IANA tz database's
+zone boundaries ([`timezonefinder`](https://github.com/jannikmi/timezonefinder) 9.2.0, which ships
+those boundaries from the timezone-boundary-builder project). It is a one-off derivation, re-run
+only if a stadium's coordinates change.
+
+Verified against the data itself: converting every one of the 488 FIFA `kickoff_at` values with its
+stadium's zone puts every match between 12:00 and 22:59 local time, which the test suite enforces
+(`StadiumsTest`) — a wrong zone shows up immediately as a night or early-morning kickoff.
+
 Wikipedia and Wikidata are otherwise **not** used elsewhere in the project — in particular, they
 were excluded from the dataset audit (`docs/DATASET_AUDIT.md`) in favor of FIFA's own API. The one
 other exception, `attendance`, is documented in its own section immediately below.
@@ -185,6 +197,7 @@ player, the standard convention also used by RSSSF and Wikipedia.
 | Stadium coordinates (2026) | OpenFootball | `worldcup.stadiums.json` `coords` field |
 | Stadium coordinates (2002–2022) | Wikidata, then Wikipedia | OpenFootball has no coordinate data for these years |
 | `kickoff_at` (all years) | FIFA (`api.fifa.com`) | authoritative; OpenFootball's local time is not used |
+| `stadiums.json`'s `timezone` | Derived | IANA zone looked up from the stadium's coordinates, see [Stadium time zones](#stadium-time-zones-derived-from-coordinates) |
 | `teams.json`'s `confederation_id` | FIFA (`api.fifa.com`) | `GET /api/v3/teams/{IdTeam}`; OpenFootball has no confederation data |
 | `matches[].attendance` | FIFA, RSSSF, Wikipedia | per-tournament priority documented above and in [`attendance-match-mapping.md`](attendance-match-mapping.md) |
 | `referees.json` (`name`), `football_associations.json` (`name`) | RSSSF, Wikipedia, FIFA | per-tournament priority documented above and in [`referees-match-mapping.md`](referees-match-mapping.md) |

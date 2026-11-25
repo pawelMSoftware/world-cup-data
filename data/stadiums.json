@@ -6,7 +6,8 @@
     "name": "Ahmad bin Ali Stadium",
     "city": "Al Rayyan",
     "latitude": 25.329640,
-    "longitude": 51.342273
+    "longitude": 51.342273,
+    "timezone": "Asia/Qatar"
   },
   {
     "id": "019f5fb8-8efe-7661-82a7-2d43fd455a41",
@@ -15,7 +16,8 @@
     "name": "Al Bayt Stadium",
     "city": "Al Khor",
     "latitude": 25.652222,
-    "longitude": 51.487778
+    "longitude": 51.487778,
+    "timezone": "Asia/Qatar"
   },
   {
     "id": "019f5fb8-8efe-75e3-9f11-74b7d7de8166",
@@ -24,7 +26,8 @@
     "name": "Al Janoub Stadium",
     "city": "Al Wakrah",
     "latitude": 25.159722,
-    "longitude": 51.574167
+    "longitude": 51.574167,
+    "timezone": "Asia/Qatar"
   },
   {
     "id": "019f5fb8-8efe-78ed-820f-04018964d048",
@@ -33,7 +36,8 @@
     "name": "Al Thumama Stadium",
     "city": "Doha",
     "latitude": 25.235278,
-    "longitude": 51.532182
+    "longitude": 51.532182,
+    "timezone": "Asia/Qatar"
   },
   {
     "id": "019f5fb8-8efd-7e30-8f76-37e101796960",
@@ -42,7 +46,8 @@
     "name": "Allianz Arena",
     "city": "München",
     "latitude": 48.218775,
-    "longitude": 11.624753
+    "longitude": 11.624753,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efd-7d9b-b660-d8ca1bd74318",
@@ -51,7 +56,8 @@
     "name": "AOL Arena",
     "city": "Hamburg",
     "latitude": 53.586944,
-    "longitude": 9.898611
+    "longitude": 9.898611,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efe-7a58-a842-d455ecc6e0cf",
@@ -60,7 +66,8 @@
     "name": "Arena Amazônia",
     "city": "Manaus",
     "latitude": -3.083056,
-    "longitude": -60.028056
+    "longitude": -60.028056,
+    "timezone": "America/Manaus"
   },
   {
     "id": "019f5fb8-8efe-7024-8593-9fceac57b287",
@@ -69,7 +76,8 @@
     "name": "Arena da Baixada",
     "city": "Curitiba",
     "latitude": -25.448333,
-    "longitude": -49.276944
+    "longitude": -49.276944,
+    "timezone": "America/Sao_Paulo"
   },
   {
     "id": "019f5fb8-8efe-7e69-9c76-be9c8cc6341b",
@@ -78,7 +86,8 @@
     "name": "Arena de São Paulo",
     "city": "São Paulo",
     "latitude": -23.545278,
-    "longitude": -46.474167
+    "longitude": -46.474167,
+    "timezone": "America/Sao_Paulo"
   },
   {
     "id": "019f5fb8-8efe-788f-8233-47c286459164",
@@ -87,7 +96,8 @@
     "name": "Arena Fonte Nova",
     "city": "Salvador",
     "latitude": -12.978611,
-    "longitude": -38.504167
+    "longitude": -38.504167,
+    "timezone": "America/Bahia"
   },
   {
     "id": "019f5fb8-8efe-725e-976a-203be06762ac",
@@ -96,7 +106,8 @@
     "name": "Arena Pantanal",
     "city": "Cuiabá",
     "latitude": -15.604000,
-    "longitude": -56.121600
+    "longitude": -56.121600,
+    "timezone": "America/Cuiaba"
   },
   {
     "id": "019f5fb8-8efe-7987-9603-fd04d62b412e",
@@ -105,7 +116,8 @@
     "name": "Arena Pernambuco",
     "city": "Recife",
     "latitude": -8.040556,
-    "longitude": -35.008333
+    "longitude": -35.008333,
+    "timezone": "America/Recife"
   },
   {
     "id": "019f5fb8-8efe-73e0-a395-dd2000808131",
@@ -114,7 +126,8 @@
     "name": "Arrowhead Stadium",
     "city": "Kansas City",
     "latitude": 39.048889,
-    "longitude": -94.483889
+    "longitude": -94.483889,
+    "timezone": "America/Chicago"
   },
   {
     "id": "019f5fb8-8efd-77a1-8b52-79fc41eb33c5",
@@ -123,7 +136,8 @@
     "name": "Asiad Main Stadium",
     "city": "Busan",
     "latitude": 35.190000,
-    "longitude": 129.058222
+    "longitude": 129.058222,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efe-7fde-9ac9-22a377065fa9",
@@ -132,7 +146,8 @@
     "name": "AT&T Stadium",
     "city": "Dallas (Arlington)",
     "latitude": 32.747778,
-    "longitude": -97.092778
+    "longitude": -97.092778,
+    "timezone": "America/Chicago"
   },
   {
     "id": "019f5fb8-8efd-7288-81cc-db9623feb8d7",
@@ -141,7 +156,8 @@
     "name": "AWD-Arena",
     "city": "Hannover",
     "latitude": 52.360000,
-    "longitude": 9.731111
+    "longitude": 9.731111,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efe-70b1-94df-d2bb2f6f6308",
@@ -150,7 +166,8 @@
     "name": "BC Place",
     "city": "Vancouver",
     "latitude": 49.276667,
-    "longitude": -123.111944
+    "longitude": -123.111944,
+    "timezone": "America/Vancouver"
   },
   {
     "id": "019f5fb8-8efe-75e8-9723-ec8fbf06b4ca",
@@ -159,7 +176,8 @@
     "name": "BMO Field",
     "city": "Toronto",
     "latitude": 43.633333,
-    "longitude": -79.418611
+    "longitude": -79.418611,
+    "timezone": "America/Toronto"
   },
   {
     "id": "019f5fb8-8efe-7aec-b755-dfd3288964bd",
@@ -168,7 +186,8 @@
     "name": "Cape Town Stadium",
     "city": "Cape Town",
     "latitude": -33.903461,
-    "longitude": 18.411153
+    "longitude": 18.411153,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efd-73be-b698-762b393f348b",
@@ -177,7 +196,8 @@
     "name": "Commerzbank-Arena",
     "city": "Frankfurt",
     "latitude": 50.068056,
-    "longitude": 8.645806
+    "longitude": 8.645806,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efd-7a2d-a477-ead7a3b0fd44",
@@ -186,7 +206,8 @@
     "name": "Daegu World Cup Stadium",
     "city": "Daegu",
     "latitude": 35.829739,
-    "longitude": 128.690205
+    "longitude": 128.690205,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efd-76df-acd9-e533733a6177",
@@ -195,7 +216,8 @@
     "name": "Daejeon World Cup Stadium",
     "city": "Daejeon",
     "latitude": 36.365139,
-    "longitude": 127.325167
+    "longitude": 127.325167,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efe-7cf3-a8f9-626b3407aab0",
@@ -204,7 +226,8 @@
     "name": "Education City Stadium",
     "city": "Al Rayyan",
     "latitude": 25.310800,
-    "longitude": 51.424400
+    "longitude": 51.424400,
+    "timezone": "Asia/Qatar"
   },
   {
     "id": "019f5fb8-8efe-7553-be44-116d73265c41",
@@ -213,7 +236,8 @@
     "name": "Ekaterinburg Arena",
     "city": "Ekaterinburg",
     "latitude": 56.832500,
-    "longitude": 60.573611
+    "longitude": 60.573611,
+    "timezone": "Asia/Yekaterinburg"
   },
   {
     "id": "019f5fb8-8efe-7a32-8c4e-641cece99f80",
@@ -222,7 +246,8 @@
     "name": "Ellis Park Stadium",
     "city": "Johannesburg",
     "latitude": -26.197500,
-    "longitude": 28.060833
+    "longitude": 28.060833,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efe-7cb0-bca6-c131c79d47d8",
@@ -231,7 +256,8 @@
     "name": "Estadio Akron",
     "city": "Guadalajara (Zapopan)",
     "latitude": 20.681667,
-    "longitude": -103.462778
+    "longitude": -103.462778,
+    "timezone": "America/Mexico_City"
   },
   {
     "id": "019f5fb8-8efe-74e1-970f-7ff434a34384",
@@ -240,7 +266,8 @@
     "name": "Estadio Azteca",
     "city": "Mexico City",
     "latitude": 19.303056,
-    "longitude": -99.150556
+    "longitude": -99.150556,
+    "timezone": "America/Mexico_City"
   },
   {
     "id": "019f5fb8-8efe-70a5-8055-58b32b382679",
@@ -249,7 +276,8 @@
     "name": "Estadio BBVA",
     "city": "Monterrey (Guadalupe)",
     "latitude": 25.669167,
-    "longitude": -100.244444
+    "longitude": -100.244444,
+    "timezone": "America/Monterrey"
   },
   {
     "id": "019f5fb8-8efe-755b-a938-943f560fce44",
@@ -258,7 +286,8 @@
     "name": "Estádio Beira-Rio",
     "city": "Porto Alegre",
     "latitude": -30.065556,
-    "longitude": -51.236111
+    "longitude": -51.236111,
+    "timezone": "America/Sao_Paulo"
   },
   {
     "id": "019f5fb8-8efe-7eab-a467-db1b10eaa19a",
@@ -267,7 +296,8 @@
     "name": "Estádio Castelão",
     "city": "Fortaleza",
     "latitude": -3.807222,
-    "longitude": -38.522500
+    "longitude": -38.522500,
+    "timezone": "America/Fortaleza"
   },
   {
     "id": "019f5fb8-8efe-7600-8c9f-9761c5925144",
@@ -276,7 +306,8 @@
     "name": "Estádio das Dunas",
     "city": "Natal",
     "latitude": -5.826900,
-    "longitude": -35.212400
+    "longitude": -35.212400,
+    "timezone": "America/Fortaleza"
   },
   {
     "id": "019f5fb8-8efe-701b-9a21-d951ab0e798a",
@@ -285,7 +316,8 @@
     "name": "Estádio do Maracanã",
     "city": "Rio de Janeiro",
     "latitude": -22.912167,
-    "longitude": -43.230164
+    "longitude": -43.230164,
+    "timezone": "America/Sao_Paulo"
   },
   {
     "id": "019f5fb8-8efe-76e2-918e-1158c3a1e043",
@@ -294,7 +326,8 @@
     "name": "Estádio Mineirão",
     "city": "Belo Horizonte",
     "latitude": -19.865833,
-    "longitude": -43.970833
+    "longitude": -43.970833,
+    "timezone": "America/Sao_Paulo"
   },
   {
     "id": "019f5fb8-8efe-770c-8c65-6c30d54d03ba",
@@ -303,7 +336,8 @@
     "name": "Estádio Nacional Mané Garrincha",
     "city": "Brasília",
     "latitude": -15.783611,
-    "longitude": -47.899167
+    "longitude": -47.899167,
+    "timezone": "America/Sao_Paulo"
   },
   {
     "id": "019f5fb8-8efe-7a3e-9502-48637335a35c",
@@ -312,7 +346,8 @@
     "name": "Fisht Stadium",
     "city": "Sochi",
     "latitude": 43.402267,
-    "longitude": 39.956111
+    "longitude": 39.956111,
+    "timezone": "Europe/Moscow"
   },
   {
     "id": "019f5fb8-8efd-7a10-8b83-7d78ba42915f",
@@ -321,7 +356,8 @@
     "name": "Frankenstadion",
     "city": "Nürnberg",
     "latitude": 49.426111,
-    "longitude": 11.125833
+    "longitude": 11.125833,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efe-7d7a-841e-7e55c7ecf80b",
@@ -330,7 +366,8 @@
     "name": "Free State Stadium",
     "city": "Bloemfontein",
     "latitude": -29.117222,
-    "longitude": 26.208889
+    "longitude": 26.208889,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efe-7687-af4f-29f4b2e09397",
@@ -339,7 +376,8 @@
     "name": "Fritz-Walter-Stadion",
     "city": "Kaiserslautern",
     "latitude": 49.434444,
-    "longitude": 7.775833
+    "longitude": 7.775833,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efe-7c75-b50f-670aab2415d2",
@@ -348,7 +386,8 @@
     "name": "Gillette Stadium",
     "city": "Boston (Foxborough)",
     "latitude": 42.091000,
-    "longitude": -71.264000
+    "longitude": -71.264000,
+    "timezone": "America/New_York"
   },
   {
     "id": "019f5fb8-8efe-7f49-928b-fdb822871a84",
@@ -357,7 +396,8 @@
     "name": "Gottlieb-Daimler-Stadion",
     "city": "Stuttgart",
     "latitude": 48.792222,
-    "longitude": 9.231944
+    "longitude": 9.231944,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efd-70aa-80f5-f5187fa34a56",
@@ -366,7 +406,8 @@
     "name": "Gwangju World Cup Stadium",
     "city": "Gwangju",
     "latitude": 35.133667,
-    "longitude": 126.874861
+    "longitude": 126.874861,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efe-7c46-b0e3-dc93b0bfac74",
@@ -375,7 +416,8 @@
     "name": "Hard Rock Stadium",
     "city": "Miami (Miami Gardens)",
     "latitude": 25.958056,
-    "longitude": -80.238889
+    "longitude": -80.238889,
+    "timezone": "America/New_York"
   },
   {
     "id": "019f5fb8-8efd-740d-9d67-dcde3df2c410",
@@ -384,7 +426,8 @@
     "name": "Incheon Munhak Stadium",
     "city": "Incheon",
     "latitude": 37.435139,
-    "longitude": 126.690806
+    "longitude": 126.690806,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efd-7013-9772-e3e520f433f4",
@@ -393,7 +436,8 @@
     "name": "International Stadium Yokohama",
     "city": "Yokohama",
     "latitude": 35.510040,
-    "longitude": 139.606250
+    "longitude": 139.606250,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efd-7330-97a5-ebd8abab1e58",
@@ -402,7 +446,8 @@
     "name": "Jeju World Cup Stadium",
     "city": "Jeju",
     "latitude": 33.246139,
-    "longitude": 126.509206
+    "longitude": 126.509206,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efd-7c1c-aefb-465ca52f6ce4",
@@ -411,7 +456,8 @@
     "name": "Jeonju World Cup Stadium",
     "city": "Jeonju",
     "latitude": 35.868111,
-    "longitude": 127.064444
+    "longitude": 127.064444,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efe-70d8-a2d0-9de12d9bf08d",
@@ -420,7 +466,8 @@
     "name": "Kaliningrad Stadium",
     "city": "Kaliningrad",
     "latitude": 54.698056,
-    "longitude": 20.533889
+    "longitude": 20.533889,
+    "timezone": "Europe/Kaliningrad"
   },
   {
     "id": "019f5fb8-8efd-7497-9b21-2b6384ee8be5",
@@ -429,7 +476,8 @@
     "name": "Kashima Soccer Stadium",
     "city": "Ibaraki",
     "latitude": 35.991700,
-    "longitude": 140.640500
+    "longitude": 140.640500,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efe-703d-9bec-632c08abaa8e",
@@ -438,7 +486,8 @@
     "name": "Kazan Arena",
     "city": "Kazan",
     "latitude": 55.821111,
-    "longitude": 49.160833
+    "longitude": 49.160833,
+    "timezone": "Europe/Moscow"
   },
   {
     "id": "019f5fb8-8efe-7a7b-9f60-a829af867289",
@@ -447,7 +496,8 @@
     "name": "Khalifa International Stadium",
     "city": "Al Rayyan",
     "latitude": 25.263611,
-    "longitude": 51.448056
+    "longitude": 51.448056,
+    "timezone": "Asia/Qatar"
   },
   {
     "id": "019f5fb8-8efd-7a8b-82ca-4b5679c613e2",
@@ -456,7 +506,8 @@
     "name": "Kobe Wing Stadium",
     "city": "Kobe",
     "latitude": 34.656667,
-    "longitude": 135.168889
+    "longitude": 135.168889,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efe-7a62-828a-9f5421e2c656",
@@ -465,7 +516,8 @@
     "name": "Levi's Stadium",
     "city": "San Francisco Bay Area (Santa Clara)",
     "latitude": 37.403000,
-    "longitude": -121.970000
+    "longitude": -121.970000,
+    "timezone": "America/Los_Angeles"
   },
   {
     "id": "019f5fb8-8efe-70cd-a398-bc5b2abb74bd",
@@ -474,7 +526,8 @@
     "name": "Lincoln Financial Field",
     "city": "Philadelphia",
     "latitude": 39.900833,
-    "longitude": -75.167500
+    "longitude": -75.167500,
+    "timezone": "America/New_York"
   },
   {
     "id": "019f5fb8-8efe-759d-bcff-b4f6c16b9cd3",
@@ -483,7 +536,8 @@
     "name": "Loftus Versfeld Stadium",
     "city": "Pretoria",
     "latitude": -25.753333,
-    "longitude": 28.222778
+    "longitude": 28.222778,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efe-7f1e-8b86-852152335307",
@@ -492,7 +546,8 @@
     "name": "Lumen Field",
     "city": "Seattle",
     "latitude": 47.595278,
-    "longitude": -122.331667
+    "longitude": -122.331667,
+    "timezone": "America/Los_Angeles"
   },
   {
     "id": "019f5fb8-8efe-77a7-96af-2d382e5a3599",
@@ -501,7 +556,8 @@
     "name": "Lusail Iconic Stadium",
     "city": "Lusail",
     "latitude": 25.420861,
-    "longitude": 51.490389
+    "longitude": 51.490389,
+    "timezone": "Asia/Qatar"
   },
   {
     "id": "019f5fb8-8efe-758c-8e2b-95922388aa3b",
@@ -510,7 +566,8 @@
     "name": "Luzhniki Stadium",
     "city": "Moscow",
     "latitude": 55.715800,
-    "longitude": 37.553600
+    "longitude": 37.553600,
+    "timezone": "Europe/Moscow"
   },
   {
     "id": "019f5fb8-8efe-77a2-a9be-e6a8203d8dda",
@@ -519,7 +576,8 @@
     "name": "Mbombela Stadium",
     "city": "Nelspruit",
     "latitude": -25.461000,
-    "longitude": 30.929000
+    "longitude": 30.929000,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efe-7ed3-98f1-848bc8eec250",
@@ -528,7 +586,8 @@
     "name": "Mercedes-Benz Stadium",
     "city": "Atlanta",
     "latitude": 33.755556,
-    "longitude": -84.400000
+    "longitude": -84.400000,
+    "timezone": "America/New_York"
   },
   {
     "id": "019f5fb8-8efe-755a-8cb5-bc7864566d6a",
@@ -537,7 +596,8 @@
     "name": "MetLife Stadium",
     "city": "New York/New Jersey (East Rutherford)",
     "latitude": 40.813528,
-    "longitude": -74.074361
+    "longitude": -74.074361,
+    "timezone": "America/New_York"
   },
   {
     "id": "019f5fb8-8efd-781a-9f7d-0386b0c77b6f",
@@ -546,7 +606,8 @@
     "name": "Miyagi Stadium",
     "city": "Miyagi",
     "latitude": 38.335400,
-    "longitude": 140.950400
+    "longitude": 140.950400,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efe-75bd-9ff8-e179e56d4d41",
@@ -555,7 +616,8 @@
     "name": "Mordovia Arena",
     "city": "Saransk",
     "latitude": 54.182778,
-    "longitude": 45.201389
+    "longitude": 45.201389,
+    "timezone": "Europe/Moscow"
   },
   {
     "id": "019f5fb8-8efe-7ba7-8f60-be5a8bbdbc26",
@@ -564,7 +626,8 @@
     "name": "Moses Mabhida Stadium",
     "city": "Durban",
     "latitude": -29.829000,
-    "longitude": 31.030300
+    "longitude": 31.030300,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efd-7ba0-89a3-f503ec6e9f3d",
@@ -573,7 +636,8 @@
     "name": "Munsu Cup Stadium",
     "city": "Ulsan",
     "latitude": 35.535278,
-    "longitude": 129.259444
+    "longitude": 129.259444,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efd-7a66-bbab-c1dc7a43c644",
@@ -582,7 +646,8 @@
     "name": "Nagai Stadium",
     "city": "Osaka",
     "latitude": 34.614119,
-    "longitude": 135.518450
+    "longitude": 135.518450,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efe-77a6-a5e8-7f067a454f0b",
@@ -591,7 +656,8 @@
     "name": "Nelson Mandela Bay Stadium",
     "city": "Port Elizabeth",
     "latitude": -33.937778,
-    "longitude": 25.598889
+    "longitude": 25.598889,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efd-70ed-b914-d3ca9853927e",
@@ -600,7 +666,8 @@
     "name": "Niigata Stadium",
     "city": "Niigata",
     "latitude": 37.882500,
-    "longitude": 139.059167
+    "longitude": 139.059167,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efe-7ef6-84d9-95276e112efb",
@@ -609,7 +676,8 @@
     "name": "Nizhny Novgorod Stadium",
     "city": "Nizhny Novgorod",
     "latitude": 56.337500,
-    "longitude": 43.963333
+    "longitude": 43.963333,
+    "timezone": "Europe/Moscow"
   },
   {
     "id": "019f5fb8-8efe-7b1e-b05c-fce69bd28728",
@@ -618,7 +686,8 @@
     "name": "NRG Stadium",
     "city": "Houston",
     "latitude": 29.684722,
-    "longitude": -95.410833
+    "longitude": -95.410833,
+    "timezone": "America/Chicago"
   },
   {
     "id": "019f5fb8-8efd-7cfd-bb3f-51c621502ae3",
@@ -627,7 +696,8 @@
     "name": "Ōita Stadium",
     "city": "Ōita",
     "latitude": 33.200556,
-    "longitude": 131.657500
+    "longitude": 131.657500,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efd-7e5c-b227-4bf13948fe14",
@@ -636,7 +706,8 @@
     "name": "Olympiastadion",
     "city": "Berlin",
     "latitude": 52.514722,
-    "longitude": 13.239444
+    "longitude": 13.239444,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efe-7677-baf9-af62ef793c75",
@@ -645,7 +716,8 @@
     "name": "Peter Mokaba Stadium",
     "city": "Polokwane",
     "latitude": -23.924689,
-    "longitude": 29.468765
+    "longitude": 29.468765,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efe-73f6-9b6a-03823a3fea7f",
@@ -654,7 +726,8 @@
     "name": "RheinEnergieStadion",
     "city": "Köln",
     "latitude": 50.933611,
-    "longitude": 6.875000
+    "longitude": 6.875000,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efe-78f5-bf7b-868f9fd1d0b7",
@@ -663,7 +736,8 @@
     "name": "Rostov Arena",
     "city": "Rostov-on-Don",
     "latitude": 47.209444,
-    "longitude": 39.737778
+    "longitude": 39.737778,
+    "timezone": "Europe/Moscow"
   },
   {
     "id": "019f5fb8-8efe-7488-bbb9-f5b3f64af225",
@@ -672,7 +746,8 @@
     "name": "Royal Bafokeng Stadium",
     "city": "Rustenburg",
     "latitude": -25.578600,
-    "longitude": 27.160700
+    "longitude": 27.160700,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efe-7ecb-bdc0-e279211ff093",
@@ -681,7 +756,8 @@
     "name": "Saint Petersburg Stadium",
     "city": "Saint Petersburg",
     "latitude": 59.973000,
-    "longitude": 30.220500
+    "longitude": 30.220500,
+    "timezone": "Europe/Moscow"
   },
   {
     "id": "019f5fb8-8efd-74f6-8b6c-f220fad65a86",
@@ -690,7 +766,8 @@
     "name": "Saitama Stadium",
     "city": "Saitama",
     "latitude": 35.903100,
-    "longitude": 139.717500
+    "longitude": 139.717500,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efe-7609-a894-b7d3c8933e5a",
@@ -699,7 +776,8 @@
     "name": "Samara Arena",
     "city": "Samara",
     "latitude": 53.277778,
-    "longitude": 50.237222
+    "longitude": 50.237222,
+    "timezone": "Europe/Samara"
   },
   {
     "id": "019f5fb8-8efd-7411-96bc-4ef4c5c7e2ed",
@@ -708,7 +786,8 @@
     "name": "Sapporo Dome",
     "city": "Sapporo",
     "latitude": 43.015200,
-    "longitude": 141.409800
+    "longitude": 141.409800,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efd-75a5-9f65-da504de65855",
@@ -717,7 +796,8 @@
     "name": "Seoul World Cup Stadium",
     "city": "Seoul",
     "latitude": 37.568222,
-    "longitude": 126.897361
+    "longitude": 126.897361,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efd-7f08-b171-c88c3dfac418",
@@ -726,7 +806,8 @@
     "name": "Shizuoka Stadium",
     "city": "Shizuoka",
     "latitude": 34.743333,
-    "longitude": 137.970556
+    "longitude": 137.970556,
+    "timezone": "Asia/Tokyo"
   },
   {
     "id": "019f5fb8-8efd-7254-9813-2dbbea1035d2",
@@ -735,7 +816,8 @@
     "name": "Signal Iduna Park",
     "city": "Dortmund",
     "latitude": 51.492500,
-    "longitude": 7.451667
+    "longitude": 7.451667,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efe-7a5a-9b7a-a9918ff53d45",
@@ -744,7 +826,8 @@
     "name": "Soccer City",
     "city": "Johannesburg",
     "latitude": -26.234722,
-    "longitude": 27.982222
+    "longitude": 27.982222,
+    "timezone": "Africa/Johannesburg"
   },
   {
     "id": "019f5fb8-8efe-7c7f-b28f-6ec90a68f2ff",
@@ -753,7 +836,8 @@
     "name": "SoFi Stadium",
     "city": "Los Angeles (Inglewood)",
     "latitude": 33.953000,
-    "longitude": -118.339000
+    "longitude": -118.339000,
+    "timezone": "America/Los_Angeles"
   },
   {
     "id": "019f5fb8-8efe-7454-9f2e-c7107ef9ed1b",
@@ -762,7 +846,8 @@
     "name": "Spartak Stadium",
     "city": "Moscow",
     "latitude": 55.817861,
-    "longitude": 37.440250
+    "longitude": 37.440250,
+    "timezone": "Europe/Moscow"
   },
   {
     "id": "019f5fb8-8efe-7443-a40d-6c44308e3d04",
@@ -771,7 +856,8 @@
     "name": "Stadium 974",
     "city": "Doha",
     "latitude": 25.290000,
-    "longitude": 51.565000
+    "longitude": 51.565000,
+    "timezone": "Asia/Qatar"
   },
   {
     "id": "019f5fb8-8efd-7b5e-8f61-46b882d6091d",
@@ -780,7 +866,8 @@
     "name": "Suwon World Cup Stadium",
     "city": "Suwon",
     "latitude": 37.286278,
-    "longitude": 127.036889
+    "longitude": 127.036889,
+    "timezone": "Asia/Seoul"
   },
   {
     "id": "019f5fb8-8efd-7740-ad8c-4046faeb3626",
@@ -789,7 +876,8 @@
     "name": "Veltins-Arena",
     "city": "Gelsenkirchen",
     "latitude": 51.554444,
-    "longitude": 7.067500
+    "longitude": 7.067500,
+    "timezone": "Europe/Berlin"
   },
   {
     "id": "019f5fb8-8efe-7b69-8675-daf14b9c8cd5",
@@ -798,7 +886,8 @@
     "name": "Volgograd Arena",
     "city": "Volgograd",
     "latitude": 48.734444,
-    "longitude": 44.548611
+    "longitude": 44.548611,
+    "timezone": "Europe/Volgograd"
   },
   {
     "id": "019f5fb8-8efe-725d-922d-63a0bd04c287",
@@ -807,6 +896,7 @@
     "name": "Zentralstadion",
     "city": "Leipzig",
     "latitude": 51.345833,
-    "longitude": 12.348333
+    "longitude": 12.348333,
+    "timezone": "Europe/Berlin"
   }
 ]
