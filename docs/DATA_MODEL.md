@@ -53,6 +53,7 @@ erDiagram
         string city
         float latitude
         float longitude
+        string timezone
     }
     TOURNAMENT {
         uuid id PK
@@ -204,6 +205,7 @@ One row per stadium used across the 7 tournaments (74 for 2002–2022, 16 for 20
 | `city` | string | City or metro label as used at tournament time — see [CONVENTIONS.md](CONVENTIONS.md#city-naming-policy). |
 | `latitude` | float | Decimal degrees, always 6 decimal places (e.g. `25.329640`). |
 | `longitude` | float | Decimal degrees, always 6 decimal places. |
+| `timezone` | string | [IANA time zone](https://www.iana.org/time-zones) of the stadium's location (e.g. `Asia/Qatar`, `America/Manaus`), derived from `latitude`/`longitude` — see [DATA_SOURCES.md](DATA_SOURCES.md#stadium-time-zones-derived-from-coordinates). Lets consumers show a match's official local date and time from its UTC `kickoff_at`; DST and historical offset changes come from the tz database, not from this file. |
 
 Sorted by `code` ascending.
 
