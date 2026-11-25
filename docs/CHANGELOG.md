@@ -7,6 +7,10 @@ uses [Semantic Versioning](https://semver.org/) for its schema and dataset conte
 
 ## [Unreleased]
 
+No changes yet.
+
+## [1.7.0] — 2026-11-25
+
 ### Added
 
 - `stadiums.json`: `timezone` on every record — the IANA time zone of the stadium's location (e.g.
